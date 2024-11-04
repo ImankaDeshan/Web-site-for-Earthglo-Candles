@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="placeorder.css">
+    <title>Check out page</title>
+</head>
+<body>
+
+    <video class="video-background" autoplay loop muted> 
+        <source src="Images/Placeorder/Background.mp4" type="video/mp4">
+      </video>
+
+    <div class="order" id="login-page">
+        <div class="head">
+            <h3>Place Your Order </h3>
+            <p class ="p1"> Please fill this details to before confirm your order</p>
+         </div>
+
+         <div class ="container"> 
+            <form action="" class="orderform" method="post">
+
+                
+                    <div class="genaral">
+                        <h5> Genaral Details</h5>
+                        <input type="text" placeholder="Enter your name">
+                        <input type="text" placeholder="Phone No">
+                    </div>
+
+                    <div class="Delivery-Details">
+                        <h5> Delivery Details </h5>
+                        <input type="text" placeholder="Home No">
+                        <input type="text" placeholder="Street 1">
+                        <input type="text" placeholder="Street 2">
+                        <input type="text" placeholder="City">
+                        <input type="text" placeholder="District">
+                        <input type="text" placeholder="Postal Code">
+                    </div>
+
+                
+                
+
+            </form>
+            <div class="rightside">
+                <div class="odersummery">
+                    <h5> Oder Summery</h5>
+                    <p>Item Quantity</p>
+                    <p> Delivery Fee</p>
+                    <p>Total Cost</p>
+                </div>
+
+                <div class="btn">
+                    <input class="placeorder" type="button" value="Place Order">
+                    <input onclick="Closeplaceorder()" class="Cancel" type="button" value="Cancel">
+                </div>
+             </div>
+         
+        </div>
+    </div>
+
+    <script> 
+        function Closeplaceorder() {
+            window.location.href ="Products.html";
+        }
+    </script>
+</body>
+</html>

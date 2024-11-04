@@ -1,0 +1,115 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products  </title>
+    <link rel="stylesheet" href="Prod.css">
+    <script src="Prod.js" defer></script>
+</head>
+<body>
+
+    <div class="page1">
+        
+
+ <!-- head Section  -->
+        <div class="head">
+
+<!-- header section  -->
+            <div class ="header"> 
+            <a class ="Backhome"href="Candles Online Shop.html">  <img  src="Images/Prod/Backhome.png" > </a>
+            <h2> Our Products </h2>
+
+<!-- cart icon and count -->
+                <a href="#" id ="icon-cart" class="cart-icon"> <svg fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7h-1M8 7h-.688M13 5v4m-2-2h4"/>
+                  </svg>
+                  <span class="cart-count"> 0 </span>
+                  </a>
+             </div>
+
+<!-- Product list  -->
+            <div class="prodnames" id="filter-buttons">
+                <button class="active" data-filter ="all">All Products</button>
+                <button data-filter="scen"> Scented Candles</button>
+                <button data-filter="soy"> Soy Candles</button>
+                <button data-filter="pillar"> Pillar Candles</button>
+                <button data-filter="tea"> Tea Light Candles</button> 
+        </div>
+           
+        </div>
+<!-- cart design  -->
+        <div id ="cart" class="cart-design">
+            <h1> Shopping cart</h1>
+            <div id="cart-li" class="cart-list">
+
+            </div>
+            <div class="btn"> 
+                <button onclick="openplaceorder()" class="pay"> Pay Now </button>
+                <button  id="close-cart" class="close"> close</button>
+            </div>
+        </div>
+
+       
+    
+
+<!-- product list -->
+        
+        <div class="prodlist" id="filterable-cards">
+            <div class="card product" data-name="scen" data-id ="1" Data-price="1200" data-image="Images/Page2/Scented Candles.webp">
+                <img src="Images/Page2/Scented Candles.webp" alt="">
+                <div class="text">
+                    <h6> Scented Candle 1 </h6>
+                    <p>Rs 1200</p>
+                </div>
+                <button id ="add" class ="add-to-cart" onclick="addToCart(1)">Add to Cart</button>
+            </div>
+
+            <div class="card" data-name="soy" data-id ="2" data-price ="1400" data-image ="Images/Page2/Soy candles 2.jpg">
+                <img src="Images/Page2/Soy candles 2.jpg" alt="">
+                <div class="text">
+                    <h6> Soy Candle 1 </h6>
+                    <p>Rs 1400</p>
+                </div>
+                <button id ="add" class ="add-to-cart" onclick="addToCart(2)">Add to Cart</button>
+            </div>
+
+            <div class="card" data-name="pillar" data-id ="3" data-price ="1150" data-image ="Images/Page2/Pillar candles.jpg">
+                <img src="Images/Page2/Pillar candles.jpg" alt="">
+                <div class="text">
+                    <h6> Pillar Candle 1 </h6>
+                    <p>Rs 1150</p>
+                </div>
+                <button id ="add" class ="add-to-cart" onclick="addToCart(3)">Add to Cart</button>
+            </div>
+
+            <div class="card" data-name="tea" data-id ="4" data-price ="1350" data-image ="Images/Page2/Tealight Candles.jpg">
+                <img src="Images/Page2/Tealight Candles.jpg" alt="">
+                <div class="text">
+                    <h6> Tea Light Candle 1 </h6>
+                    <p>Rs 1350</p>
+                </div>
+                <button id ="add" class ="add-to-cart" onclick="addToCart(4)">Add to Cart</button>
+            </div>
+
+            <div class="card" data-name="scen" data-id ="5" data-price="1400" data-image="Images/Page2/Scented Candles.webp">
+                <img src="Images/Page2/Scented Candles.webp" alt="">
+                <div class="text">
+                    <h6> Scented candle 2 </h6>
+                    <p>Rs 1400</p>
+                </div>
+                <button id ="add" class ="add-to-cart" onclick="addToCart(5)">Add to Cart</button>
+            </div>
+
+            <div class="card" data-name="scen" data-id="6" data-price="1250" data-image="Images/Page2/Scented Candles.webp">
+                <img src="Images/Page2/Scented Candles.webp" alt="">
+                <div class="text">
+                    <h6> Scented candle 3 </h6>
+                    <p>Rs 1250</p>
+                </div>
+                <button id ="add" class ="add-to-cart" onclick="addToCart(6)"> Add to Cart</button>
+            </div>
+        </div>
+    
+    </div>
+</body>
