@@ -126,3 +126,7 @@ body , html {
     display: none;
     color: #FF5733;   
 }
+
+.loginerror {
+    display: none;
+}

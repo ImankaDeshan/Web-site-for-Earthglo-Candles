@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login or signup</title>
+    <title>Signup for Earthglo candels</title>
     <link rel="stylesheet" href="login.css">
    
 </head>
@@ -56,8 +56,8 @@
 
             <input type="password"  placeholder="Confirm password" name = "Repassword">
             <p class="Rpwerror error"> <?php echo $Rpwerror ?> </p>
-            <p class="sign">If you have an account. please <a href="" id ="login-click"> Login</a></p>
-            <button class ="signinbtn" type ="submit" value = "Submit" name ="submit"> submit</button>
+            <p class="sign">If you have an account. please <a href="Login.php" > Login</a></p>
+            <button class ="signinbtn" type ="submit" value = "Signup" name ="submit"> Signup</button>
 
         </form>
 
