@@ -84,11 +84,12 @@ body , html {
 }
 
 .signininterface .signinbtn {
-    width: 100px;
-    height: 20px;
+    width: 150px;
+    height: 30px;
     border-radius: 10px;
     background-color: #32675F;
     color: white;
+    font-size: 15px;
 }
 
 .signininterface .signinbtn:hover {

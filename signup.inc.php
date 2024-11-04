@@ -83,6 +83,8 @@ if (isset($_POST["submit"])) {
 
             if (mysqli_query($conn, $sql)) {
                 $newR = "New record created successfully";
+                $Username = Null;
+                $Email = Null;
             } else {
                 echo "Error: " . $sql . "<br>" . mysqli_error($conn);
             }
