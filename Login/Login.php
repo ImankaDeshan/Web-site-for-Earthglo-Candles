@@ -18,7 +18,7 @@
         ?>
 
 <video class="video-background" autoplay loop muted>
-        <source src="Images/login/Background.mp4" type="video/mp4">
+        <source src="../Images/login/Background.mp4" type="video/mp4">
       </video>
 
 
@@ -35,7 +35,7 @@
             <input type="password" name="password" placeholder="password"  >
          
 
-            <p class="sign">If you dont have an account. please <a href="signup.php" > Signup</a></p>
+            <p class="sign">If you dont have an account. please <a href="../signup/signup.php" > Signup</a></p>
             <button class ="signinbtn" type ="submit" value = "Login" name ="login"> Login</button>
 
         </form>
