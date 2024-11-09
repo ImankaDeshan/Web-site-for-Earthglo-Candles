@@ -24,10 +24,10 @@
 		$username = isset($_SESSION['username']) ? $_SESSION['username'] : null;
 		
          if ($username!= NUll) {
-			?> <style> .login{display:none;} .namediv{ display:flex;  }  </style> <?php 
+			?> <style> .rlogin{display:none} .login{display:none;} .namediv{ display:flex;  }  </style> <?php 
 		} 
 		else {
-			?> <style> .login{display:block;} .namediv{display:none}  </style> <?php
+			?> <style> .Rprofile{display:none} .login{display:block;} .namediv{display:none}  </style> <?php
 		}
 
         ?>
@@ -37,23 +37,6 @@
 			<a href="../Login/Login.php" ><input type ="button" value ="Login/signin" class ="login btn" ></a>
 
 		<!-- Code for profile view -->
-
-			
-			<!-- <div class="namediv" > 
-				<p class="name"> <?php echo "$username"; ?> </p> 
-				<img  class= "ProfilePic" src ="../Images/Profile/Profile.png">
-
-			</div> -->
-		
-		<!-- Profile menu bar codes -->
-
-			<!-- <div class="profilemenu"  id = "Pmenu" > 
-				<form action="" id = "pmenu" class="prm" method ="POST">
-					<button class="viewpro"> Visit Profile</button>
-					<button class ="logout" name = "logout"> Log Out </button>
-				</form>
-
-			</div> -->
 
 
 
@@ -136,8 +119,25 @@
 					
 				</ul>
 				<a href="../Login/Login.php" ><input type ="button" value ="Login/signin" class ="btn rlogin" ></a>
+
+				<div class = "line">  </div> 
+
+				<div class = "Rprofile"> 
+					<img class="ProfilePic" src="../Images/Profile/Profile.png" alt="Profile Picture">
+					<p class="Rname"><?= htmlspecialchars($username) ?></p>
+				
+					<form action="" id="profile-form" class="Rprm" method="POST">
+						<button type="button" class="viewpro" onclick="window.location.href='profile.php'">Visit Profile</button>
+						<button type="submit" class="logout" name="logout">Log Out</button>
+					</form>
+
+				</div>
+
+
 			</div>
 			
+			<!-- contents of main page 1  -->
+
 			<p class = "intro"> Sri Lanka Best Online <br> Selection Of  Scented Candles <br> and incense <br> from around the globe! </p>
 			
 			<a href="../Products/Products.html"><input id ="btn"  class ="btn shopbtn" type="button" Value="Shop Online"></a>

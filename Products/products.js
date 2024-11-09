@@ -101,5 +101,5 @@ addToCartButtons.forEach(button => button.addEventListener('click', function () 
 // });
 
 function placeorder() {
-    window.location.href = '../Prod.css';
+    window.location.href = '../Placeoder/placeorder.html';
 }
