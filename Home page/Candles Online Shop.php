@@ -1,8 +1,4 @@
-<?php
-	require_once '../Login/Login.inc.php';
-	
-	
-?>
+
 
 
 <html> 
@@ -14,6 +10,12 @@
 		
 		<!-- <link rel="stylesheet" href="Candlehome.css"> -->
 	</head> 
+
+	<?php
+	require_once '../Login/Login.inc.php';
+	
+	
+?>
 	
 	<body class ="body"> 
 	
@@ -37,23 +39,36 @@
 		<!-- Code for profile view -->
 
 			
-			<div class="namediv" onclick = "openprm()"> 
+			<!-- <div class="namediv" > 
 				<p class="name"> <?php echo "$username"; ?> </p> 
-				<img class= "ProfilePic" src ="../Images/Profile/Profile.png">
+				<img  class= "ProfilePic" src ="../Images/Profile/Profile.png">
 
-			</div>
+			</div> -->
 		
 		<!-- Profile menu bar codes -->
 
-			<div class="profilemenu"  id = "Pmenu" > 
-				<form action="" class="prm" method ="POST">
+			<!-- <div class="profilemenu"  id = "Pmenu" > 
+				<form action="" id = "pmenu" class="prm" method ="POST">
 					<button class="viewpro"> Visit Profile</button>
 					<button class ="logout" name = "logout"> Log Out </button>
 				</form>
 
-			</div>
+			</div> -->
 
 
+
+	<div class="namediv">
+    <p class="name"><?= htmlspecialchars($username) ?></p>
+    <div class="profile-container">
+        <img class="ProfilePic" src="../Images/Profile/Profile.png" alt="Profile Picture">
+        <div class="profilemenu" id="Pmenu">
+            <form action="" id="profile-form" class="prm" method="POST">
+                <button type="button" class="viewpro" onclick="window.location.href='profile.php'">Visit Profile</button>
+                <button type="submit" class="logout" name="logout">Log Out</button>
+            </form>
+        </div>
+    </div>
+</div>
 
 
 
@@ -276,6 +291,17 @@
 
 					} else {
       				 	rmenu.style.display = "none";
+   					 }
+				}
+
+				function openprm() {
+					var pmenu = document.getElementById('pmenu');
+
+					if (pmenu.style.display === "none") {
+						pmenu.style.display = "block";
+
+					} else {
+      				 	pmenu.style.display = "none";
    					 }
 				}
 
