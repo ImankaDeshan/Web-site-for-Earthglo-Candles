@@ -37,7 +37,7 @@
 		<!-- Code for profile view -->
 
 			
-			<div class="namediv"> 
+			<div class="namediv" onclick = "openprm()"> 
 				<p class="name"> <?php echo "$username"; ?> </p> 
 				<img class= "ProfilePic" src ="../Images/Profile/Profile.png">
 
@@ -45,7 +45,7 @@
 		
 		<!-- Profile menu bar codes -->
 
-			<div class="profilemenu"  id = "Pmenu"> 
+			<div class="profilemenu"  id = "Pmenu" > 
 				<form action="" class="prm" method ="POST">
 					<button class="viewpro"> Visit Profile</button>
 					<button class ="logout" name = "logout"> Log Out </button>
@@ -278,6 +278,8 @@
       				 	rmenu.style.display = "none";
    					 }
 				}
+
+				
 		
 			</script>
 

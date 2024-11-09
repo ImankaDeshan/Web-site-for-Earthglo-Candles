@@ -6,7 +6,7 @@
     $serverName = "localhost";
     $dbUsername = "root";
     $dbPassword = "";
-    $dbName = "earthglo";
+    $dbName = "earthglodata";
 
     $conn = mysqli_connect($serverName, $dbUsername, $dbPassword, $dbName);
     
