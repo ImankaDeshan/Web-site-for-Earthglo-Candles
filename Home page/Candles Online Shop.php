@@ -92,7 +92,7 @@
 					
 					</li>
 					<li><a href ="../Contact us/Contact.html"> Contact </a></li>
-					<li> <a href ="../About us/AboutUs.html">About Us </a> </li>
+					<li> <a href ="../About us/AboutUs.php">About Us </a> </li>
 				</ul>
 
 				
@@ -214,60 +214,8 @@
 
 		</div>
 
-		<div class ="page3">
-
-			<footer class="footer">
-				<div class="container">
-				<div class="row">
-				
-					<div class="footer-col">
-						<h4>Contact Us</h4>
-						<ul>
-							<div class="contact">
-							<li>Phone: +94767001137</li>
-							<li>Whatsapp: +94768902256</li>
-							<li>Email: earthglow@gmail.com</li>
-							<li>Address: Sandasewana,Ahangama,Galle</li>
-							</div>
-						</ul>
-					</div>
-					
-					<div class="footer-col">
-						<h4>Products</h4>
-						<ul>
-							<li><a href="#">Scented Candles</a></li>
-							<li><a href="#">Soy Candles</a></li>
-							<li><a href="#">Pillar Candles</a></li>
-							<li><a href="#">Tea Light Candles </a></li>
-						</ul>
-					</div>
-					
-					<div class="footer-col">
-						<h4>Quick Links</h4>
-						<ul>
-							<li><a href="#">Home</a></li>
-							<li><a href="#">About Us</a></li>
-							<li><a href="#">Payment Method</a></li>
-							<li><a href="#">Terms & Conditions</a></li>
-						</ul>
-					</div>
-					
-					<div class="footer-col">
-						<h4>follow us</h4>
-						<div class="social-links">
-							<a href="#"><i class="fab fa-facebook-f"></i></a>
-							<a href="#"><i class="fab fa-tiktok"></i></a>
-							<a href="#"><i class="fab fa-instagram"></i></a>
-							<a href="#"><i class="fab fa-linkedin-in"></i></a>
-						</div>
-					</div>
-					
-					<div class="bottom-bar">
-						<p>&copy;2024 EarthGlowCandles.lk |all right reserved</p>
-					</div>
-				</div>
-				</div>
-			</footer>
+		<?php 
+ 		require_once '../Footer/footer.php'; ?>
 	
 			</div>
 	
