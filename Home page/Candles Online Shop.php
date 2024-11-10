@@ -63,34 +63,7 @@
 				
 				<ul class ="menubar"> 
 					<li> <a href ="Candles Online Shop.php"> Home </a></li>
-					<li><a href ="../Products/Products.html"> Produts</a>		
-						
-						<!-- <div class = "products" >
-
-							<p class ="topic"> Our Products </p>
-
-							<div class ="block1"> 
-								<img class="p1" src ="../Images/Page2/Scented Candles.webp" > 
-								<p> Scented Candles</p> 
-							</div>
-
-							<div class ="block1"> 
-								<img class="p1" src ="../Images/Page2/Soy candles 2.jpg" > 
-								<p> Soy Candles</p> 
-							</div>
-
-							<div class ="block1"> 
-								<img class="p1" src ="../Images/Page2/Pillar candles.jpg" > 
-								<p> Pillar Candles</p> 
-							</div>
-
-							<div class ="block1"> 
-								<img class="p1" src ="../Images/Page2/Tealight Candles.jpg" > 
-								<p> Tea Light Candles </p> 
-							</div>
-						</div> -->
-					
-					</li>
+					<li><a href ="../Products/Products.html"> Produts</a></li>
 					<li><a href ="../Contact us/Contact.html"> Contact </a></li>
 					<li> <a href ="../About us/AboutUs.php">About Us </a> </li>
 				</ul>
