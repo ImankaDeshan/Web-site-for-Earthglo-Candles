@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header</title>
     <style> 
+            .video-background {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: -1; 
+                opacity: 0.7;
+        
+             }
             .header-container {
                 display: grid;
                 grid-template-columns: 200px auto 200px;
@@ -97,6 +108,10 @@
     </style> 
 </head>
 <body>
+
+    <video class="video-background" autoplay loop muted> 
+            <source src="../../Images/Addmin/Home/BackgroundVideo.mp4" type="video/mp4">
+    </video>
     <div class="header-container">
 
     <div class="log"> 
@@ -109,7 +124,7 @@
         <ul class ="menubar"> 
             <li> <a href ="../addminhome/Addminhome.php"> Home </a></li>
             <li><a href ="../Addproducts/addproducts.php"> Produts Add</a></li>
-            <li><a href ="../Contact us/Contact.html"> View all Products</a></li>
+            <li><a href ="../Viewproducts/viewprod.php"> View all Products</a></li>
             <li> <a href ="../About us/AboutUs.php"> Orders </a> </li>
         </ul>
     </div>

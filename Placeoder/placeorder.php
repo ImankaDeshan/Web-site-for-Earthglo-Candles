@@ -1,9 +1,11 @@
+<?php require_once 'plcorder.inc.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="placeorder.css">
+    <link rel="stylesheet" href="plcorder.css">
     <title>Check out page</title>
 </head>
 <body>
@@ -24,21 +26,21 @@
                 
                     <div class="genaral">
                         <h5> Genaral Details</h5>
-                        <input type="text" placeholder="Enter your name">
-                        <input type="text" placeholder="Phone No">
+                        <input type="text" placeholder="Enter your name" name ="Cus_name">
+                        <input type="text" placeholder="Phone No" name ="Ph_no">
                     </div>
 
                     <div class="Delivery-Details">
                         <h5> Delivery Details </h5>
-                        <input type="text" placeholder="Home No">
-                        <input type="text" placeholder="Street 1">
-                        <input type="text" placeholder="Street 2">
-                        <input type="text" placeholder="City">
-                        <input type="text" placeholder="District">
-                        <input type="text" placeholder="Postal Code">
+                        <input type="text" placeholder="Home No" name ="Home_no">
+                        <input type="text" placeholder="Street 1" name ="Street_1">
+                        <input type="text" placeholder="Street 2" name ="Street_2">
+                        <input type="text" placeholder="City" name ="City">
+                        <input type="text" placeholder="District" name ="Distric">
+                        <input type="text" placeholder="Postal Code" name ="Postal_code">
                     </div>
 
-                
+                   
                 
 
             </form>
@@ -51,8 +53,11 @@
                 </div>
 
                 <div class="btn">
-                    <input class="placeorder" type="button" value="Place Order">
-                    <input onclick="Closeplaceorder()" class="Cancel" type="button" value="Cancel">
+                    <form action="" method="post" class = "button_form">
+                        <button class="placeorder" type="submit"  name = "submit"> Place Order </button>
+                        <input onclick="Closeplaceorder()" class="Cancel" type="button" value="Cancel">
+                        
+                    </form>
                 </div>
              </div>
          

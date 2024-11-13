@@ -58,3 +58,8 @@
 	 margin: 10px;
 
 }
+
+.action button:hover {
+	cursor: pointer;
+	background-color: #4504c7;
+}

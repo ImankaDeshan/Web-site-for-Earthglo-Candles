@@ -10,19 +10,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Addmin Home page</title>
-    <link rel="stylesheet" href="addminhome.css">
+    <link rel="stylesheet" href="Addminhome.css">
 </head>
 
-<video class="video-background" autoplay loop muted> 
-        <source src="../../Images/Addmin/Home/BackgroundVideo.mp4" type="video/mp4">
-</video>
+
 
    <?php require_once '../Header.php'; ?>
 
     <div class="page-contents">
         <div class="action">
             <h class="actionname"> Add New products </h>
-            <button > Add products </button> 
+           <a href="../Addproducts/addproducts.php"><button  > Add products </button> </a> 
         </div>
 
         <div class="action">
