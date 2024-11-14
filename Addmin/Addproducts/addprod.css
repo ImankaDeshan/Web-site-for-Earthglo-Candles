@@ -104,11 +104,11 @@
 .confirm {
     width:150px;
     height:35px;
-    background-color: rgb(34, 0, 109);
+    background-color: #22006d;
     color: white;
     border:none;
     border-radius: 5px;
-    margin-top: 25px;
+    margin-top: 50px;
 }
 
 .confirm:hover {

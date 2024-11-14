@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
-    <link rel="stylesheet" href="AboutUs.css">
+    <link rel="stylesheet" href="Aboutus.css">
     <!-- <link rel="stylesheet" href="../Products/Prod.css"> -->
 </head>
 <body>
@@ -43,23 +43,25 @@
             <p>After months of dedication, Earth Glow Candle Shop emerged, using locally sourced ingredients like high-quality waxes, cotton-core wicks, 
                 fine fragrance oils, and essential oils. Our first batch of hand-poured mini container candles was met with overwhelming enthusiasm, 
                 motivating us to expand the collection into a wider variety of shapes, sizes, and scents.</p>
-                <br>
+               
 
-            <p>What makes Earth Glow truly unique is the love and care infused into every candle by local artisans. These skilled hands ensure that each
+            <p class = "p1" id = "Para1" style="display: none;" >  <br>What makes Earth Glow truly unique is the love and care infused into every candle by local artisans. These skilled hands ensure that each
                  product radiates warmth and joy, spreading light into the lives of our customers. Customization is at the heart of our business, allowing
-                  us to cater to your unique preferences, ensuring that every candle perfectly reflects your style and tastes.</p>
+                  us to cater to your unique preferences, ensuring that every candle perfectly reflects your style and tastes.
+                <br> <br>
+                Our mission is simple: to create high-quality, beautifully handmade home fragrance products for you to enjoy. Beyond just candles, we aim to
+                 empower the community through collaborations and support for local artisans. Earth Glow isn't just about selling candles; it's about finding 
+                 balance, embracing creativity, and sharing joy with others who, like us, dream big.
+                 <br> <br>
+                 Thank you for being a part of this journey. We love hearing how our candles bring warmth and light into your lives, and we are grateful to share 
+                 in the memories and stories they inspire!
+                
+                </p>
                 <br>
 
-            <p>Our mission is simple: to create high-quality, beautifully handmade home fragrance products for you to enjoy. Beyond just candles, we aim to
-                 empower the community through collaborations and support for local artisans. Earth Glow isn't just about selling candles; it's about finding 
-                 balance, embracing creativity, and sharing joy with others who, like us, dream big.</p>
-                 <br>
-                 
-            <p>Thank you for being a part of this journey. We love hearing how our candles bring warmth and light into your lives, and we are grateful to share 
-                in the memories and stories they inspire!</p>
-                <br>
+            
     
-            <a href="" class="read-more">Read More</a>
+            <button id = "button" class = "read-more" onclick = reedmore()> Reed More </button> 
         </div>
     </section>
 </div>
@@ -70,5 +72,22 @@
 <?php 
  require_once '../Footer/footer.php'; ?>
 
+        <script> 
+            function reedmore() {
+                    Paragraph = document.getElementById("Para1");
+                    button = document.getElementById("button");
+
+                if (Paragraph.style.display === "none" ) {
+                        Paragraph.style.display = "block";
+                        button.innerText = "Read less";
+
+
+                }
+                else {
+                    Paragraph.style.display = "none";
+                    button.innerText = "Read More";
+                }
+            }
+        </script> 
 </body>
 </html>

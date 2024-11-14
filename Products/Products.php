@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products  </title>
-    <link rel="stylesheet" href="Prod.css">
+    <link rel="stylesheet" href="Products.css">
     <script src="products.js" defer></script>
 </head>
 <body>
+
+
+
 
     <div class="page1">
         
@@ -55,7 +58,7 @@
 
 <!-- product list -->
         
-        <div class="prodlist" id="filterable-cards">
+        <!-- <div class="prodlist" id="filterable-cards">
             <div class="card product" data-name="scen" data-id ="1" Data-price="1200" data-image="../Images/Page2/Scented Candles.webp">
                 <img src="../Images/Page2/Scented Candles.webp" alt="">
                 <div class="text">
@@ -110,6 +113,42 @@
                 <button id ="add" class ="add-to-cart" onclick="addToCart(6)"> Add to Cart</button>
             </div>
         </div>
-    
+  
     </div>
+       -->
+       <?php 
+    require_once '../db.inc.php' ; 
+
+    if (!$conn) {
+        die("Database connection failed: " . mysqli_connect_error());
+    }
+    $sql = "SELECT prod_id, prod_name, prod_description, prod_price, prod_image FROM products WHERE prod_status = 'active'";
+    $result = mysqli_query($conn, $sql);
+
+    if (!$result) {
+        die("Error fetching products: " . mysqli_error($conn));
+    }
+    if (mysqli_num_rows($result) > 0) {
+        // Loop through each product and display it in a separate box
+        while ($row = mysqli_fetch_assoc($result)) {
+           ?>
+<div class="prodlist">
+    
+    <?php 
+         echo '<div class="card">';
+         echo '<img src="../Addmin/Addproducts/products/' . htmlspecialchars($row['prod_image']) . '" alt="" class="product-image">';
+         echo '<h2 class="product-name">' . htmlspecialchars($row['prod_name']) . '</h2>';
+         // echo '<p class="prod-des">' . htmlspecialchars($row['prod_description']) . '</p>';
+         echo '<p class="prod-price">Rs: ' . htmlspecialchars($row['prod_price']) .'.00</p>';
+
+    ?>
+
+
+<?php
+      echo '</div>'; 
+      ?>
+</div>
+<?php 
+        }} 
+        ?>
 </body>

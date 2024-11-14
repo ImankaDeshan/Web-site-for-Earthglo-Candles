@@ -222,6 +222,7 @@ button {
 	gap:30px;
 	flex-wrap: wrap;
 	justify-content:center;
+	font-family: 'Poppins', sans-serif;
 }
 
 .card {
@@ -240,7 +241,7 @@ button {
 	object-fit: cover;
 }
 
-.prodlist .text {
+.prodlist .product-name {
 	margin: 5px;
 	margin-top: 0px;
 	width: 100%;
@@ -248,11 +249,14 @@ button {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+	font-weight: 500;
+	font-size: 17px;
 }
 
-.prodlist .text h6 {
-	font-size: 15px;
+.prodlist .prod-price {
+	text-align: center;
 }
+
 
 .prodlist button {
 	border: none;

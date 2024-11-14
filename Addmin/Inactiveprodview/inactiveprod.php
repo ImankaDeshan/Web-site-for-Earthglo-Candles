@@ -6,12 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>view products</title>
-    <link rel="stylesheet" href="viewprod.css">
+    <link rel="stylesheet" href="inactiveproducts.css">
 </head>
 <body>
-
 <?php require_once '../Header.php'; ?>
-<h1> All Products </h1>
+<h1> All Disabled Products </h1>
 <div class="prod-page">
    
 
@@ -25,7 +24,7 @@ if (!$conn) {
 }
 
 // Fetch active products from the database
-$sql = "SELECT prod_id, prod_name, prod_description, prod_price, prod_image FROM products WHERE prod_status = 'active'";
+$sql = "SELECT prod_id, prod_name, prod_description, prod_price, prod_image FROM products WHERE prod_status = 'inactive'";
 $result = mysqli_query($conn, $sql);
 
 if (!$result) {
@@ -46,7 +45,7 @@ if (mysqli_num_rows($result) > 0) {
 
             ?>
             <div class = "button">
-                <form action="deleteprod.php" method="POST" >
+                <form action="deleteinprod.php" method="POST" >
                     <input type="hidden" name="prod_id" value="<?php echo $row['prod_id']; ?>">
                     <button type="submit" class="delete">Delete</button>
                 </form>
@@ -68,7 +67,7 @@ if (mysqli_num_rows($result) > 0) {
     }
 } else {
     ?> <div class="errormsg"> <?php
-    echo '<p class = "error">No active products available.</p>';
+    echo '<p class = "error">No Disabled products available.</p>';
     ?> </div> <?php
 }
 

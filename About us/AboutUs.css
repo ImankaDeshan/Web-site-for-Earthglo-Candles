@@ -101,3 +101,7 @@
   .about-content.read-more:hover{
       background-color: #32675F;
   }
+
+  .about-content .p1 {
+    display: none;
+  }

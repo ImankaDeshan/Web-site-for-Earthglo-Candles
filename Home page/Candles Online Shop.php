@@ -63,7 +63,7 @@
 				
 				<ul class ="menubar"> 
 					<li> <a href ="Candles Online Shop.php"> Home </a></li>
-					<li><a href ="../Products/Products.html"> Produts</a></li>
+					<li><a href ="../Products/Products.php"> Produts</a></li>
 					<li><a href ="../Contact us/Contact.html"> Contact </a></li>
 					<li> <a href ="../About us/AboutUs.php">About Us </a> </li>
 				</ul>
@@ -113,7 +113,7 @@
 
 			<p class = "intro"> Sri Lanka Best Online <br> Selection Of  Scented Candles <br> and incense <br> from around the globe! </p>
 			
-			<a href="../Products/Products.html"><input id ="btn"  class ="btn shopbtn" type="button" Value="Shop Online"></a>
+			<a href="../Products/Products.php"><input id ="btn"  class ="btn shopbtn" type="button" Value="Shop Online"></a>
 			
 			<div  > 
 			<p class="Paymentmethods"> We accepted </p> 

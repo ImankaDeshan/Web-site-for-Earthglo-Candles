@@ -1,0 +1,130 @@
+* {
+    margin: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.page-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; 
+    opacity: 0.7;
+
+ }
+
+ .page-container h2 {
+    font-size: 25px;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(240, 248, 255, 0.5);
+    backdrop-filter: blur(3px);
+ }
+
+ .page-container form {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    margin-top: 20px;
+    background-color:  rgb(240, 248, 255, 0.5);
+    padding: 8px;
+    width: 300px;
+    height: auto;
+    border-radius: 30px;
+    backdrop-filter: blur(5px);
+
+ }
+
+ .page-container form h1 {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #245d52;
+ }
+
+ .page-container form label {
+    font-size: 15px;
+    color: #4b4453;
+   
+ }
+
+ .page-container form input {
+    width: 280px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 10px;
+ }
+
+ .page-container form textarea {
+    width: 280px;
+    height: 100px;
+    background-color:rgba(255, 255, 255, 0.5);
+    font-size: 15px;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+ }
+
+ .page-container .underbar {
+    display:grid;
+    grid-template-columns: 150px 150px;
+    justify-content: center;
+    /* align-items: center; */
+    margin-top: 10px;
+    margin-bottom: 15px;
+ }
+
+ .page-container select {
+    width: 100px;
+    height: 30px;
+    border:none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    background-color:rgb(255, 255, 255, 0.5);
+ }
+
+ .page-container .imglnk {
+    display: flex;
+    flex-direction: column;
+ }
+
+ .page-container form .img {
+    background-color: #a3d8f2;
+    padding: 5px;
+    border-radius: 5px;
+    margin-right: 10px;
+ }
+
+ .page-container form .img:hover {
+    background-color: #33809b;
+    cursor: pointer;
+    scale: 1.023;
+ }
+
+ .page-container form button {
+    width :150px;
+    height: 35px;
+    border:none;
+    border-radius: 10px;
+    background-color: #245d52;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+ }

@@ -12,6 +12,16 @@
     
 }
 
+h1 {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	text-align: center;
+	margin-top: 10px;
+	color: #610000;
+	background-color: rgb(240, 248, 255,0.2);
+	backdrop-filter: blur(2px);
+  }
+
 .prod-container {
     display: flex;
     margin: 25px;
