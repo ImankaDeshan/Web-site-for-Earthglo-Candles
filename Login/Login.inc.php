@@ -1,6 +1,7 @@
 <?php
-require_once '../db.inc.php';
 session_start();  // Start the session
+require_once '../db.inc.php';
+
 
 $lgerror = null;
 $welcomenote = null;

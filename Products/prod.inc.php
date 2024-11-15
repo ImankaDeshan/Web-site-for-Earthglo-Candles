@@ -33,9 +33,14 @@ if (mysqli_num_rows($result) > 0) {
                 echo '<p class="prod-price">Rs: ' . htmlspecialchars($row['prod_price']) .'.00</p>';
             ?> 
                     <form method = "POST" action="">
+                    <input type="hidden" name="prod_id" value="<?php echo htmlspecialchars($row['prod_id']); ?>">
+                    <input type="hidden" name="prod_name" value="<?php echo htmlspecialchars($row['prod_name']); ?>">
+                    <input type="hidden" name="prod_price" value="<?php echo htmlspecialchars($row['prod_price']); ?>">
+
+                    
                         <button class="viewprod" onclick = openprod() > View Details</button>
                         <!-- <button class="addcart" name = "addcart" onclick="addToCart( ' .<?php $row['prod_id']?> . ')"> Add to Cart</button> -->
-                        <button type = "submit"class="addcart" name = "addcart" onclick="addToCart()"> Add to Cart</button>
+                        <button class="addcart" onclick="addToCart(<?= $row['prod_id']; ?>, <?= htmlspecialchars($row['prod_price']); ?>)">Add to Cart</button>
                     </form>
                 </div>
     </div>

@@ -87,8 +87,27 @@ document.querySelectorAll('.prodnames button').forEach(button => {
 });
 
 // ------------------------------------add to cart functions---------------------------------------------------------
+function addToCart(prodId, price) {
+    fetch('addcart.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: `prod_id=${encodeURIComponent(prodId)}&price=${encodeURIComponent(price)}`
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // Update cart count or notify the user of successful addition
+            alert('Product added to cart!');
+            document.querySelector('.cart-count').innerText = data.cartCount;
+        } else {
+            alert(data.message); // Displays login error or other messages
+        }
+    })
+    .catch(error => console.error('Error:', error));
+}
 
-    
     </script>
 </body>
 </html>
