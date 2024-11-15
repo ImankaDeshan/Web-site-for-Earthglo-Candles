@@ -33,7 +33,7 @@
                 <button data-filter="scen">Scented Candles</button>
                 <button data-filter="soy">Soy Candles</button>
                 <button data-filter="pillar">Pillar Candles</button>
-                <button data-filter="tea">Tea Light Candles</button>
+                <button data-filter="tealight">Tea Light Candles</button>
             </div>
         </div>
 
