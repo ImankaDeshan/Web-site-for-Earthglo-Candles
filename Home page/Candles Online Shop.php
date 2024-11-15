@@ -63,7 +63,7 @@
 				
 				<ul class ="menubar"> 
 					<li> <a href ="Candles Online Shop.php"> Home </a></li>
-					<li><a href ="../Products/Products.php"> Produts</a></li>
+					<li><a href ="../Products/Prod.php"> Produts</a></li>
 					<li><a href ="../Contact us/Contact.html"> Contact </a></li>
 					<li> <a href ="../About us/AboutUs.php">About Us </a> </li>
 				</ul>

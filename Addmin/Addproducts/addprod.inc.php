@@ -28,9 +28,10 @@ if (isset($_POST['Add'])) {
     $folder = 'products/'.$prodimage_name;
 
     $status = $_POST['status'];
+    $category = $_POST['cato'];
 
 
-    $sql = "INSERT INTO products (prod_name, prod_description, prod_price, prod_image, prod_status) VALUES ('$prodname', '$proddes', '$prodprice', '$prodimage_name', '$status')";
+    $sql = "INSERT INTO products (prod_name, prod_description, prod_price, prod_image, prod_status, prod_category) VALUES ('$prodname', '$proddes', '$prodprice', '$prodimage_name', '$status', '$category')";
     move_uploaded_file($prodimage_tmp_name, $folder);
 
             if (mysqli_query($conn, $sql)) {

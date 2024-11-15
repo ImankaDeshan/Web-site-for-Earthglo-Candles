@@ -116,6 +116,10 @@
     cursor: pointer;
 }
 
+.selections {
+    margin-top: 10px;
+}
+
 .stauts {
     margin-top: 10px;
     width: 100px;
@@ -124,5 +128,10 @@
     border: none;
     border-radius: 20px;
     padding: 5px;
+    
+}
+
+.cate {
+    width: 150px;
 }
 

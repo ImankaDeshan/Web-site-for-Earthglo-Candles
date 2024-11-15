@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Add Products</title>
-    <link rel="stylesheet" href="addprod.css">
+    <link rel="stylesheet" href="addproducts.css">
     
 </head>
 <body>
@@ -30,12 +30,23 @@
                 <label for="fileInput" class="custom-file-upload">Choose Image</label>
                 <span id="fileName">No file chosen</span>
                 
-                <select class = "stauts" name="status" id="status">
-                    <option value = "active"> Active </option> 
-                    <option value="inactive"> Inactive </option>
+                <div class="selections">
+                    <select class = "stauts" name="status" id="status">
+                        <option value = "active"> Active </option> 
+                        <option value="inactive"> Inactive </option>
 
-                </select>
+                    </select>
 
+                    <select class = "cate stauts" name="cato" id="cato">
+                        <option value="scented"> Scented Candles </option>
+                        <option value="pilar"> Pillar Candles</option>
+                        <option value="tealight"> Tea Light Candles</option>
+                        <option value="soy"> Soy Candles</option>
+                        <option value="other"> Others </option>
+
+
+                    </select>
+                </div>
 
                 <button type = "submit" class = "confirm" name = "Add" > Confirm </button>
             </form>

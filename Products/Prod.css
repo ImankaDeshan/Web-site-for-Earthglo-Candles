@@ -186,6 +186,7 @@ button {
 
 
 								/* Product Names buttons*/ 
+								
 
 .prodnames {
 	/* width: 100%; */
@@ -215,18 +216,32 @@ button {
 }
 
 					/* product List  */
+.prod-page {
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	padding-top: 25px;
+	overflow: hidden;
+}
 
 .prodlist {
 	display: flex;
-	margin: 25px;
-	gap:30px;
-	flex-wrap: wrap;
+	
+	/* flex-wrap: wrap; */
 	justify-content:center;
 	font-family: 'Poppins', sans-serif;
 }
 
 .card {
-	flex-basis:220px;
+	/* flex-basis:220px; */
+	width: auto;
+	display: flex;
+	flex-direction:column ;
+	align-items: center;
+
 	padding: 3px;
 	border-radius: 8px;
 	border: 1px solid rgba(0, 0, 0, 0.2);
@@ -255,18 +270,35 @@ button {
 
 .prodlist .prod-price {
 	text-align: center;
+	color: brown;
 }
 
 
-.prodlist button {
+.prodlist .addcart {
 	border: none;
 	background-color: #32675F;
 	padding:5px;
 	width: 200px;
-	border-radius: 0px 0px 10px 10px ;
+	border-radius: 0px 0px 5px 5px ;
 	margin:10px;
 	color:white;
+	margin-top: 0px;
 
+}
+.prodlist form {
+	display: flex;
+	flex-direction: column;
+}
+
+.prodlist .viewprod {
+	padding:5px;
+	width: 200px;
+	border-radius: 0px 0px 10px 10px ;
+	margin:10px;
+	border: none;
+	background-color: transparent;
+	color: #32675F;
+	font-size: 13px;
 }
 
 .prodlist button:hover{
@@ -276,3 +308,8 @@ button {
 #filterable-cards .card.hide {
 	display: none;
   }
+
+.error {
+	font-size:20px;
+	color: brown;
+}
