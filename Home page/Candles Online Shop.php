@@ -56,7 +56,7 @@
 
 
 			<div class="log"> 
-				<img src="../Images/Page1/Logo.png" alt="img">
+				<a href="../Addmin/addminhome/Addminhome.php"><img src="../Images/Page1/Logo.png" alt="img"></a>
 				<h5>  Earth Glow Candles </h5>
 			</div>
 			<div class ="header"> 
@@ -98,6 +98,7 @@
 				<div class = "Rprofile"> 
 					<img class="ProfilePic" src="../Images/Profile/Profile.png" alt="Profile Picture">
 					<p class="Rname"><?= htmlspecialchars($username) ?></p>
+					
 				
 					<form action="" id="profile-form" class="Rprm" method="POST">
 						<button type="button" class="viewpro" onclick="window.location.href='profile.php'">Visit Profile</button>

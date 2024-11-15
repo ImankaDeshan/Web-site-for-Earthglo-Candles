@@ -218,17 +218,19 @@ button {
 					/* product List  */
 .prod-page {
 	width: 100%;
+	height: auto;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	gap: 10px;
 	padding-top: 25px;
+	overflow: hidden;
 }
 
 .prodlist {
 	display: flex;
 	
-	gap:30px;
-	flex-wrap: wrap;
+	/* flex-wrap: wrap; */
 	justify-content:center;
 	font-family: 'Poppins', sans-serif;
 }
@@ -306,3 +308,8 @@ button {
 #filterable-cards .card.hide {
 	display: none;
   }
+
+.error {
+	font-size:20px;
+	color: brown;
+}

@@ -45,9 +45,11 @@
         </div>
     </div>
 
-    <?php
+    <!-- <?php
             require_once 'addcart.php' ; 
-    ?>
+    ?> -->
+
+    
 
     <script>
         // Load all products by default when page loads
