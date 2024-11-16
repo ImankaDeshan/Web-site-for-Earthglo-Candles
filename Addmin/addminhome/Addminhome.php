@@ -10,13 +10,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Addmin Home page</title>
-    <link rel="stylesheet" href="Addminhome.css">
+    <link rel="stylesheet" href="Addhome.css">
 </head>
 
 
 
    <?php require_once '../Header.php'; ?>
-   <h1> Addmin Dashboard </h1>
+   <h1> Admin Dashboard </h1>
     <div class="page-contents">
         
         <div class="action">
@@ -25,7 +25,7 @@
         </div>
 
         <div class="action">
-            <h class="actionname"> Viewe Orders </h>
+            <h class="actionname"> View Orders </h>
             <button > My Orders </button> 
         </div>
 

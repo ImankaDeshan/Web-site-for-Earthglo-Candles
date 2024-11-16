@@ -1,0 +1,133 @@
+.head {
+    height:auto;
+    padding-bottom: 10px;
+   
+}
+
+.header {
+    height:100px;
+    box-shadow: 0px 0px 10px 0px rgb(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.Backhome img {
+    width: 50px;
+    position: absolute;
+        left: 0px;
+        top: 0px;
+    margin:10px;
+  
+    
+}
+
+*{
+    margin: 10px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'roboto',sans-serif;  
+  }
+  
+  body{
+      background-color: white;
+  }
+
+  .contact{
+    position: relative;
+    min-height: 30vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(163, 154, 27);
+    background-size: cover;
+  }
+
+  .content{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px auto;  
+}
+
+  .container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .container.contactInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container.contactInfo.box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+  }
+
+  .container.contactInfo.box.icon{
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+  }
+ 
+  .container.container.contactInfo.box.text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+  }
+
+  .container.container.contactInfo.box.text h3{
+    font-weight: 50;
+    color: #00bcd4;
+  }
+
+  .contactForm{
+    display: flex;
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+  }
+
+  .contactForm h2{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+  }
+
+  .contactForm.inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .contactForm.inputBox input
+  .contactForm.inputBox textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #c30f0f;
+    outline: none;
+    resize: none;
+  }
+  

@@ -64,7 +64,7 @@
 				<ul class ="menubar"> 
 					<li> <a href ="Candles Online Shop.php"> Home </a></li>
 					<li><a href ="../Products/Prod.php"> Produts</a></li>
-					<li><a href ="../Contact us/Contact.html"> Contact </a></li>
+					<li><a href ="../Contact us/Contact.php"> Contact </a></li>
 					<li> <a href ="../About us/AboutUs.php">About Us </a> </li>
 				</ul>
 
@@ -86,9 +86,9 @@
 				<img src="../Images/Page1/Close.png" alt="img" class ="close" onclick ="closemenu()">
 				<ul class="rmenu">
 					<li> <a href="Candles Online Shop.php"> Home</a></li>
-					<li> <a href="../Products/Products.html"> Products </a></li>
-					<li><a href="#">Contacts </a></li>
-					<li><a href="#">About us</a></li>
+					<li> <a href="../Products/Prod.php"> Products </a></li>
+					<li><a href="../Contact us/Contact.php">Contacts </a></li>
+					<li><a href="../About us/AboutUs.php">About us</a></li>
 					
 				</ul>
 				<a href="../Login/Login.php" ><input type ="button" value ="Login/signin" class ="btn rlogin" ></a>
@@ -116,12 +116,12 @@
 			
 			<a href="../Products/Products.php"><input id ="btn"  class ="btn shopbtn" type="button" Value="Shop Online"></a>
 			
-			<div  > 
+			<!-- <div  > 
 			<p class="Paymentmethods"> We accepted </p> 
 			
 			<img src ="../Images/Page1/pm.png" class = "pay">
 			
-		</div> 
+			</div>  -->
 	 </div>
 		
 		<div class ="page2"> 
