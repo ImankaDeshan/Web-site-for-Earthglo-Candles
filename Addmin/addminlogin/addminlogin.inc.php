@@ -23,10 +23,10 @@
                 if ($user['password'] == $password) {
                     // Password matches, start session and store username
                     $_SESSION['user_name'] = $user['username'];
-                    // $_SESSION['addmin_id'] = $userid ['userid'];
+                    $_SESSION['addmin_id'] = $userid ['userid'];
     
                     // Redirect to the home page
-                    // header("Location: ../Home page/Candles Online Shop.php");
+                    header("Location: ../addminhome/addminhome.php");
                     exit;
                 } else {
                     $lgerror = "Incorrect password.";

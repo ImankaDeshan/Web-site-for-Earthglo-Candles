@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 15, 2024 at 11:23 AM
+-- Generation Time: Nov 16, 2024 at 10:49 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -20,6 +20,27 @@ SET time_zone = "+00:00";
 --
 -- Database: `earthglo`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `addmin`
+--
+
+CREATE TABLE `addmin` (
+  `addmin_id` int(12) NOT NULL,
+  `user_name` varchar(20) NOT NULL,
+  `password` varchar(15) NOT NULL,
+  `phoneno` int(12) NOT NULL,
+  `email` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `addmin`
+--
+
+INSERT INTO `addmin` (`addmin_id`, `user_name`, `password`, `phoneno`, `email`) VALUES
+(1, 'imankadeshan', 'Deshanmax@123', 776676570, 'imankadeshan2000@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -119,6 +140,12 @@ INSERT INTO `signup` (`userid`, `username`, `email`, `password`) VALUES
 --
 
 --
+-- Indexes for table `addmin`
+--
+ALTER TABLE `addmin`
+  ADD PRIMARY KEY (`addmin_id`);
+
+--
 -- Indexes for table `products`
 --
 ALTER TABLE `products`
@@ -133,6 +160,12 @@ ALTER TABLE `signup`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `addmin`
+--
+ALTER TABLE `addmin`
+  MODIFY `addmin_id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `products`

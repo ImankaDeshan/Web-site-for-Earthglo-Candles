@@ -4,9 +4,11 @@
 }
 
 .prod-page {
-    width: 100%;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap; /* Allows wrapping to the next row */
+     /* Adds space between items */
+    justify-content:center; /* Optional: Adjust alignment */
+	align-items: center;
     
     
     

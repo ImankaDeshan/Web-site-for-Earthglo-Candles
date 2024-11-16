@@ -56,7 +56,7 @@
 
 
 			<div class="log"> 
-				<a href="../Addmin/addminhome/Addminhome.php"><img src="../Images/Page1/Logo.png" alt="img"></a>
+				<a href="../Addmin/addminlogin/addminlogin.php"><img src="../Images/Page1/Logo.png" alt="img"></a>
 				<h5>  Earth Glow Candles </h5>
 			</div>
 			<div class ="header"> 
