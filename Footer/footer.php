@@ -169,10 +169,10 @@
         <div class="footer-col">
             <h4>Quick Links</h4>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Payment Method</a></li>
-                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="Candles Online Shop.php">Home</a></li>
+                <li><a href="../About us/AboutUs.php">About Us</a></li>
+                <li><a href="../Contact us/Contact.php">Contact Us</a></li>
+                <li><a href="#">Cart</a></li>
             </ul>
         </div>
         
