@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact info</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="Contact.css">
+    <link rel="stylesheet" href="ContactUs.css">
     <link rel="stylesheet" href="../Products/Prod.css">
 </head>
 <body>
@@ -26,7 +26,8 @@
             
             <section class ="contact">
                 <div class = "content">
-                    <h2>nuhndcsdcdcd,ihcdsd nusancna </h2>
+                    <h2>It is a pleasure to contact you !</h2>
+                    <p>if you have any problem, if you want to customize candles, or anything else, our team is ready to respond to you.</p>
                 </div>
 
                 <div class ="container">
@@ -35,16 +36,16 @@
                         <div class = "box">
                             <div class = "icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
                             <div class = "text">
-                                <h3>Phone</h3>
-                                <p>+94767001137</p>
+                                <h2>Phone</h2>
+                                <p>+94767001137</p><br>
                             </div>
                         </div>
 
                         <div class = "box">
                             <div class = "icon"><i class="fa fa-whatsapp" aria-hidden="true"></i></div>
                             <div class = "text">
-                                <h3>Whatsapp</h3>
-                                <p>+94768902256</p>
+                                <h2>Whatsapp</h2>
+                                <p>+94768902256</p><br>
                                 
                             </div>
                         </div>
@@ -52,8 +53,8 @@
                         <div class = "box">
                             <div class = "icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
                             <div class = "text">
-                                <h3>Email</h3>
-                                <p>earthglow@gmail.com</p>
+                                <h2>Email</h2>
+                                <p>earthglow@gmail.com</p><br>
                                 
                             </div>
                         </div>
@@ -61,8 +62,8 @@
                         <div class = "box">
                             <div class = "icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
                             <div class = "text">
-                                <h3>Address</h3>
-                                <p>Sandasewana,Ahangama,Galle</p>
+                                <h2>Address</h2>
+                                <p>Sandasewana,Ahangama,Galle</p><br>
                                 
                             </div>
                         </div>
@@ -78,18 +79,15 @@
                             <h2>Send Message</h2>
 
                             <div class = "inputBox">
-                                <input type="text" name = "" required = "required">
-                                <span>Full Name</span>
+                                <input placeholder="Full Name" type="text" name = "" required = "required">
                             </div>
 
                             <div class = "inputBox">
-                                <input type="text" name = "" required = "required">
-                                <span>Email</span>
+                                <input placeholder="Email" type="text" name = "" required = "required">
                             </div>
 
                             <div class = "inputBox">
-                                <textarea required = "required"></textarea>
-                                <span>Type your Message</span>
+                                <textarea placeholder="Type your Message" required = "required"></textarea>
                             </div>
 
                             <div class = "inputBox">
@@ -101,5 +99,10 @@
                 </div>
             </section>   
     </div>
+
+<!-- <?php 
+ require_once '../Footer/footer.php'; 
+ ?> -->
+
 </body>
 </html>

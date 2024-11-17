@@ -18,9 +18,7 @@
     position: absolute;
         left: 0px;
         top: 0px;
-    margin:10px;
-  
-    
+    margin:10px;    
 }
 
 *{
@@ -31,7 +29,7 @@
   }
   
   body{
-      background-color: white;
+    background-image:url(https://wallpapers.com/images/hd/full-4k-desktop-candles-7d468btwwcsshzr0.jpg);
   }
 
   .contact{
@@ -42,7 +40,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: rgb(163, 154, 27);
     background-size: cover;
   }
 
@@ -52,7 +49,12 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 20px auto;  
+    margin: 10px auto;  
+}
+
+.content p{
+  font-size: 15px;
+  margin: 15px auto;
 }
 
   .container{
@@ -60,22 +62,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 40px;
   }
 
-  .container.contactInfo{
+.contactInfo{
     width: 50%;
     display: flex;
     flex-direction: column;
   }
 
-  .container.contactInfo.box{
+.box{
     position: relative;
     padding: 20px 0;
     display: flex;
   }
 
-  .container.contactInfo.box.icon{
+ .icon{
     min-width: 60px;
     height: 60px;
     background: #fff;
@@ -86,48 +88,91 @@
     font-size: 22px;
   }
  
-  .container.container.contactInfo.box.text{
+.text{
     display: flex;
     margin-left: 20px;
-    font-size: 16px;
+    font-size: 18px;
     color: #fff;
     flex-direction: column;
     font-weight: 300;
   }
 
-  .container.container.contactInfo.box.text h3{
-    font-weight: 50;
-    color: #00bcd4;
+  .text h2{
+    color: #32675F;
   }
 
   .contactForm{
     display: flex;
+    font-family: 'Poppins', sans-serif;
     width: 40%;
     padding: 40px;
     background: #fff;
+    margin-left: 50px;
+    opacity: 0.8;
   }
 
   .contactForm h2{
+    font-family: 'Poppins', sans-serif;
     font-size: 30px;
-    color: #333;
+    color: #32675F;
     font-weight: 500;
+   
   }
 
-  .contactForm.inputBox{
+  .inputBox{
     position: relative;
-    width: 100%;
+    width: 450PX;
     margin-top: 20px;
   }
 
-  .contactForm.inputBox input
-  .contactForm.inputBox textarea {
+  .inputBox input,
+  .inputBox textarea{
     width: 100%;
-    padding: 5px 0;
+    padding: 5 px 0;
     font-size: 16px;
     margin: 10px 0;
     border: none;
-    border-bottom: 2px solid #c30f0f;
+    border-bottom: 2px solid #32675F;
     outline: none;
     resize: none;
   }
+
+  .inputBox input[type= "submit"]{
+    position: relative;
+    width: 100px;
+    background: #32675F;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  @media (max-width:786px)
+  {
+    .contact
+    {
+      padding: 50px;
+    }
+    .container
+    {
+      flex-direction: column;
+    }
+    .contactInfo
+    {
+      margin-bottom: 40px;
+    }
+    .container.contactInfo,
+    .contactForm
+    {
+      width: 100%;
+    }
+  }
+
+
+
+  
+
+
+
   

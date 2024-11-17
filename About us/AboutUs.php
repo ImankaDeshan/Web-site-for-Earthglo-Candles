@@ -70,7 +70,8 @@
 </div>
  
 <?php 
- require_once '../Footer/footer.php'; ?>
+ require_once '../Footer/footer.php'; 
+ ?>
 
         <script> 
             function reedmore() {

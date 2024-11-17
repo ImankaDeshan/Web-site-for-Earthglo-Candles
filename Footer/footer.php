@@ -187,7 +187,7 @@
         </div>
         
         <div class="bottom-bar">
-            <p>&copy;2024 EarthGlowCandles.lk |all right reserved</p>
+            <p>&copy;2024 EarthGlowCandles.lk</p>
         </div>
     </div>
     </div>
