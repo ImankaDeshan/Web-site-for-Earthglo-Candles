@@ -155,3 +155,46 @@
     font-size: 25px;
 }
 
+.options {
+    background-color: rgb(150, 177, 172, 0.5);
+    backdrop-filter: blur(5px);
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    position: fixed;
+        bottom: 0px;
+    
+    
+}
+
+.options .total{
+    display: grid;
+    grid-template-columns: 300px 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:50px;
+}
+
+.options p {
+    color: brown;
+    font-size:15px ;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+}
+
+
+
+.options button {
+    background-color: #32675F;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    width: 150px;
+    height: 30px;
+    margin-bottom: 10px;
+}

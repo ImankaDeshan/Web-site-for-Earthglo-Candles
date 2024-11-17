@@ -13,7 +13,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My cart</title>
-    <link rel="stylesheet" href="cartstyle.css">
+    <link rel="stylesheet" href="cartdata.css">
 </head>
 <body>
     <div class="page">
@@ -22,12 +22,16 @@ session_start();
     <h1 class="main-header"> SHOPPING CART</h1>
     </div>
     <?php
-                if(isset($_SESSION['username'])) {
 
-                                $username = $_SESSION['username'];
-                                $sql ="SELECT `cart_id`, `user_name`, `prod_id`, `price`, `qty`, `prod_image`, `prod_name` FROM `cart` WHERE user_name = '$username'";
-                                
-                                $result = mysqli_query($conn, $sql);
+
+
+
+                if(isset($_SESSION['username'])) {
+                    $username = $_SESSION['username'];
+                    $sql ="SELECT `cart_id`, `user_name`, `prod_id`, `price`, `qty`, `prod_image`, `prod_name` FROM `cart` WHERE user_name = '$username'";
+
+                    $result = mysqli_query($conn, $sql);
+                               
 
                         if (mysqli_num_rows($result)>0) { 
                             $row = mysqli_fetch_assoc($result)
@@ -73,8 +77,61 @@ session_start();
                             ?> <p class = "empty"> Please Login first</p> <?php
                         } ?> 
 
-   
+   <div class="option-bar">
+    <?php
+   if(isset($_SESSION['username'])) {
+                    // $username = $_SESSION['username'];
+                    // // $sql ="SELECT `cart_id`, `user_name`, `prod_id`, `price`, `qty`, `prod_image`, `prod_name` FROM `cart` WHERE user_name = '$username'";
+                    // $sql ="SELECT SUM(price) AS total_price FROM 'cart' WHERE user_name = '$username";
 
+                    // $result = mysqli_query($conn, $sql);
+                    // $row = mysqli_fetch_assoc($result);
+                    
+                                $username = $_SESSION['username'];
+
+                                // Corrected SQL query
+                                $sql = "SELECT SUM(price) AS total_price FROM cart WHERE user_name = '$username'";
+
+                                $result = mysqli_query($conn, $sql);
+
+                                // Check if the query executed successfully
+                                if (!$result) {
+                                    die("Error in query: " . mysqli_error($conn));
+                                }
+
+                                $row = mysqli_fetch_assoc($result);
+
+                                $totalPrice = $row['total_price'];
+                                $totalPrice = $totalPrice -1250;
+
+                                // Fetch and display the total price
+                                // if ($row) {
+                                //     $totalPrice = $row['total_price'];
+                                //     echo "Total Price: Rs. " . $totalPrice;
+                                // } else {
+                                //     echo "No data found or error in fetching the total.";
+                                // }
+
+
+                    
+   ?>                 
+    <div class="options">
+        <div class="total">
+            <p class = "price"> Total price : Rs <?php echo $totalPrice;?> </p>
+            <?php 
+                $disprice =($totalPrice*95)/100 ;
+                $disprice=floor($disprice);
+                ?>
+            <p class = "disprice"> Discounted Price : Rs <?php echo $disprice; ?></p>
+        </div>
+        
+        <a href="../Placeorder/placeorder.php"><button> Place Order </button></a>
+        
+
+    </div>
+   </div>
+<?php
+} ?>
 </div>
 </body>
 </html>
