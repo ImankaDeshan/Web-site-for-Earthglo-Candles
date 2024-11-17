@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,13 +27,13 @@
                 
             </div>
             
-            <section class ="contact">
+            <section class ="contact-1">
                 <div class = "content">
                     <h2>It is a pleasure to contact you !</h2>
                     <p>if you have any problem, if you want to customize candles, or anything else, our team is ready to respond to you.</p>
                 </div>
 
-                <div class ="container">
+                <div class ="container-1">
                     <div class = "contactInfo">
 
                         <div class = "box">
@@ -80,17 +83,16 @@
 
                             <div class = "inputBox">
                                 <input placeholder="Full Name" type="text" name = "" required = "required">
-                            </div>
+                          
 
-                            <div class = "inputBox">
+                            
                                 <input placeholder="Email" type="text" name = "" required = "required">
-                            </div>
+                            
 
-                            <div class = "inputBox">
+                            
                                 <textarea placeholder="Type your Message" required = "required"></textarea>
-                            </div>
+                          
 
-                            <div class = "inputBox">
                                 <input type="submit" name = "" value = "send">
                             </div>
                         </form>
@@ -99,10 +101,10 @@
                 </div>
             </section>   
     </div>
-
-<!-- <?php 
+    <?php 
  require_once '../Footer/footer.php'; 
- ?> -->
+ ?> 
+
 
 </body>
 </html>

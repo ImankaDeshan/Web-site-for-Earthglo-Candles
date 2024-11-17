@@ -63,7 +63,7 @@ if (isset($_POST['addcart'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products</title>
-    <link rel="stylesheet" href="Prod.css">
+    <link rel="stylesheet" href="Products.css">
     <script src="prod.js" defer></script>
 </head>
 <body>
@@ -124,8 +124,9 @@ if (isset($_POST['addcart'])) {
                     </svg>
 
                     <?php 
+                    if (isset($_SESSION['username'])) {
                         $username = $_SESSION['username'];
-                        $sql = mysqli_query($conn,"SELECT * FROM `cart` WHERE user_name = '$username' ");
+                        $sql = mysqli_query($conn,"SELECT * FROM `cart` WHERE user_name = '$username'");
                         
                         if (mysqli_num_rows($sql) > 0 ) {
                                 $row = mysqli_num_rows($sql);   
@@ -133,7 +134,7 @@ if (isset($_POST['addcart'])) {
                             else {
                                 $row = "0";
                             }
-
+                    }
                     ?>
 
                     <span class="cart-count"> <?php echo $row?> </span>
@@ -147,8 +148,8 @@ if (isset($_POST['addcart'])) {
                 <button data-filter="soy">Soy Candles</button>
                 <button data-filter="pillar">Pillar Candles</button>
                 <button data-filter="tealight">Tea Light Candles</button>
-            </div> -->
-        </div>
+            </div>
+        </div> -->
 
         <!-- Product display section -->
         <div class="prod-page">

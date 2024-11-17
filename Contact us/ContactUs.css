@@ -5,7 +5,7 @@
 }
 
 .header {
-    height:100px;
+    height:50px;
     box-shadow: 0px 0px 10px 0px rgb(0, 0, 0, 0.3);
     display: flex;
     justify-content: center;
@@ -22,7 +22,7 @@
 }
 
 *{
-    margin: 10px;
+    margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     font-family: 'roboto',sans-serif;  
@@ -32,10 +32,9 @@
     background-image:url(https://wallpapers.com/images/hd/full-4k-desktop-candles-7d468btwwcsshzr0.jpg);
   }
 
-  .contact{
+  .contact-1{
     position: relative;
     min-height: 30vh;
-    padding: 50px 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,12 +43,12 @@
   }
 
   .content{
-    width: 90%;
+   
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 10px auto;  
+    margin: 0px; 
 }
 
 .content p{
@@ -57,7 +56,13 @@
   margin: 15px auto;
 }
 
-  .container{
+.content h2 {
+  font-size: 25px;
+  font-family: 'poppins', sans-serif;
+  font-weight: 600;
+}
+
+  .container-1{
     width: 100%;
     display: flex;
     justify-content: center;
@@ -80,35 +85,38 @@
  .icon{
     min-width: 60px;
     height: 60px;
-    background: #fff;
+    background-color: #32675F;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
     font-size: 22px;
+    color:white
   }
  
 .text{
     display: flex;
     margin-left: 20px;
     font-size: 18px;
-    color: #fff;
+    color: #000000;
     flex-direction: column;
     font-weight: 300;
   }
 
   .text h2{
-    color: #32675F;
+    color: black;
   }
 
   .contactForm{
     display: flex;
     font-family: 'Poppins', sans-serif;
-    width: 40%;
     padding: 40px;
     background: #fff;
     margin-left: 50px;
     opacity: 0.8;
+    width: 530px;
+    border-radius: 20px;
+    box-shadow: -5px 0px 10px 0px rgb(0, 0, 0, 0.5);
   }
 
   .contactForm h2{
@@ -121,8 +129,9 @@
 
   .inputBox{
     position: relative;
-    width: 450PX;
+    width:450px;
     margin-top: 20px;
+  
   }
 
   .inputBox input,
@@ -130,7 +139,8 @@
     width: 100%;
     padding: 5 px 0;
     font-size: 16px;
-    margin: 10px 0;
+    margin: 10px;
+    margin-top: 30px;
     border: none;
     border-bottom: 2px solid #32675F;
     outline: none;
@@ -146,6 +156,7 @@
     cursor: pointer;
     padding: 10px;
     font-size: 18px;
+    border-radius: 10px;
   }
 
   @media (max-width:786px)
@@ -166,6 +177,14 @@
     .contactForm
     {
       width: 100%;
+    }
+
+    .inputBox {
+      width: 100%;
+    }
+
+    .inputBox input {
+
     }
   }
 
