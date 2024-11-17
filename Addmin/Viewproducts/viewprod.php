@@ -48,7 +48,7 @@ if (mysqli_num_rows($result) > 0) {
             <div class = "button">
                 <form action="deleteprod.php" method="POST" >
                     <input type="hidden" name="prod_id" value="<?php echo $row['prod_id']; ?>">
-                    <button type="submit" class="delete">Delete</button>
+                    <button type="submit" class="delete" onclick = "return confirm('Are you sure delete this product')">Delete</button>
                 </form>
 
                 <form action="../updateprod/updateprod.php" method="GET">
