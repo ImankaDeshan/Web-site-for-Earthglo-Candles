@@ -17,10 +17,10 @@
 <video class="video-background" autoplay loop muted> 
             <source src="../../Images/Addmin/Home/BackgroundVideo.mp4" type="video/mp4">
     </video>
-    <p class = "main-header"> Only existing admin are able to add new seller or addmin to the erthglo </p>
+    <p class = "main-header"> Only existing admin are able to add new seller or admin to the Earthglo </p>
     <form action="" method = "post" class="login-form">
         <h1>Register new admin </h1> 
-        <h2> for earthglo</h2>
+        <h2> for Earthglo</h2>
         <p class = "loginerror"> <?php echo $newR ?> </p>
         <p class = "error"> <?php echo $Userror ?> </p> 
         <input type="text" class="username" name = "username" value = "<?php echo $Username ?>" placeholder = "Username">

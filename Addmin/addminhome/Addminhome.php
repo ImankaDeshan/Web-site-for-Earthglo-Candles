@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Addmin Home page</title>
-    <link rel="stylesheet" href="Addhome.css">
+    <link rel="stylesheet" href="Addminhome.css">
 </head>
 
 
@@ -41,8 +41,14 @@
 
         <div class="action">
             <h class="actionname"> Add New Admin </h>
-            <a href="../addminreg/addminreg.php"><button > View products </button> </a> 
+            <a href="../addminreg/addminreg.php"><button > Add Admin </button> </a> 
         </div>
+
+        <div class="action">
+            <h class="actionname"> Inquiries </h>
+            <a href="#"><button > View Customer Messages </button> </a> 
+        </div>
+
     </div>
 
 </body>
