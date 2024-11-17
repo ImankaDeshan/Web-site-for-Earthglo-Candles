@@ -1,7 +1,11 @@
 <?php
 session_start();
     require_once '../db.inc.php';
-?> 
+
+
+
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,16 +13,17 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My cart</title>
-    <link rel="stylesheet" href="cartstylenew.css">
+    <link rel="stylesheet" href="cartstyle.css">
 </head>
 <body>
+    <div class="page">
 <div class="header">
     <img src="" alt="" class="cart-image">
     <h1 class="main-header"> SHOPPING CART</h1>
     </div>
     <?php
         $username = $_SESSION['username'];
-        $sql = "SELECT user_name, prod_id, price, qty, prod_image, prod_name FROM cart WHERE user_name = '$username'";
+        $sql ="SELECT `cart_id`, `user_name`, `prod_id`, `price`, `qty`, `prod_image`, `prod_name` FROM `cart` WHERE user_name = '$username'";
         
         $result = mysqli_query($conn, $sql);
 
@@ -47,7 +52,10 @@ if (mysqli_num_rows($result)>0) {
                 <input type ="submit" class = "up-count" name = "update" value ="update"> 
             </form>
 
-            <form action="" method = "GET" class = "form2">
+            <form action="delete.php" method = "GET" class = "form2">
+            <input type="hidden" name="prod_id" value="<?php echo $row['prod_id']; ?>">
+            <input type="hidden" name="prod_id" value="<?php echo $row['prod_id']; ?>">
+
                 <input type="submit" name ="delete" value ="Delete">
             </form>
         </div>
@@ -60,11 +68,11 @@ if (mysqli_num_rows($result)>0) {
 
   }
   else {
-    echo "No added Products";
+    ?> <p class = "empty"> Your cart is empty</p> <?php
   }  ?> 
 
    
 
-
+</div>
 </body>
 </html>
