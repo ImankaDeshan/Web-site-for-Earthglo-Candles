@@ -129,7 +129,8 @@ if (isset($_POST['addcart'])) {
                         $sql = mysqli_query($conn,"SELECT * FROM `cart` WHERE user_name = '$username'");
                         
                         if (mysqli_num_rows($sql) > 0 ) {
-                                $row = mysqli_num_rows($sql);   
+                                $row = mysqli_num_rows($sql); 
+                                $row = $row-1;  
                         }
                             else {
                                 $row = "0";
