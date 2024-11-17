@@ -17,14 +17,17 @@ session_start();
 </head>
 <body>
     <div class="page">
+    
 <div class="header">
+<a href="../Prod/products.php"><img class = "back" src="../Images/cart/backhome.png" alt="" class="backhome"></a>
     <img src="" alt="" class="cart-image">
     <h1 class="main-header"> SHOPPING CART</h1>
     </div>
     <?php
 
+    
 
-
+// ---------------------------------------fetch data from cart db ---------------------------------
 
                 if(isset($_SESSION['username'])) {
                     $username = $_SESSION['username'];
@@ -54,7 +57,8 @@ session_start();
                                     <h5> <?php echo $row['prod_name'];?> </h5>
                                     <p>Rs <?php echo $row['price']?>.00 </p>
                                     <form class = "form1" action="" method = "POST">
-                                        <input class = "count" name = "new-count" type="number" min="1" value = "1">
+                                        <input class = "count" name = "new-count" type="number" min="1" value = "1">    
+                                        <input type="hidden" name="prod_id" value="<?php echo $row['prod_id']; ?>">
                                         <input type ="submit" class = "up-count" name = "update" value ="update"> 
                                     </form>
 

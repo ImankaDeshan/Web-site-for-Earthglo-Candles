@@ -115,7 +115,7 @@
     <div class="header-container">
 
     <div class="log"> 
-            <img src="../../Images/Page1/Logo.png" alt="img">
+            <a href="../../Home page/Candles Online Shop.php"><img src="../../Images/Page1/Logo.png" alt="img"></a>
             <h5>  Earth Glow Candles </h5>
     </div>
 

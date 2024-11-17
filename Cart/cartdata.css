@@ -41,6 +41,19 @@
     padding: 10px;
 }
 
+.back {
+    width :50px;
+    position: absolute;
+        top: 0px;
+        left: 0px;
+    margin: 10px;
+}
+
+.back:hover {
+    cursor: pointer;
+    scale: 1.05;
+}
+
 .header h1 {
     color:white;
     font-weight: 600;
