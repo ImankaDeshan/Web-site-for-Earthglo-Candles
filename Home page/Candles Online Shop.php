@@ -114,7 +114,7 @@
 
 			<p class = "intro"> Sri Lanka Best Online <br> Selection Of  Scented Candles <br> and incense <br> from around the globe! </p>
 			
-			<a href="../Products/Products.php"><input id ="btn"  class ="btn shopbtn" type="button" Value="Shop Online"></a>
+			<a href="../Prod/Products.php"><input id ="btn"  class ="btn shopbtn" type="button" Value="Shop Online"></a>
 			
 			<!-- <div  > 
 			<p class="Paymentmethods"> We accepted </p> 
