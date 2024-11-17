@@ -1,12 +1,16 @@
 <?php 
 session_start();
 require '../db.inc.php';
+$error = NULL;
 
-// Check if the user is logged in
-if (!isset($_SESSION['username'])) {
-    die("Error: User not logged in.");
+// // Check if the user is logged in
+// if (!isset($_SESSION['username'])) {
     
-}
+//     $error = "User not login to the Earthglo";
+
+
+    
+// } else {
 
 if (isset($_POST['addcart'])) {
     $prodid = $_POST['prod_id'];
@@ -16,7 +20,9 @@ if (isset($_POST['addcart'])) {
     $result = mysqli_query($conn,$sql);
 
     if(mysqli_num_rows($result)>0){
-        echo "prodcucts already exist";
+        $error = "Product Already Exsist";
+       
+        exit();
 
     } else {
 
@@ -40,6 +46,7 @@ if (isset($_POST['addcart'])) {
 
         if ($stmt->execute()) {
             echo "Item added to cart successfully!";
+            header('location:products.php');
         } else {
             echo "Error adding item to cart: " . $stmt->error;
         }
@@ -50,21 +57,6 @@ if (isset($_POST['addcart'])) {
     }
 }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ?>

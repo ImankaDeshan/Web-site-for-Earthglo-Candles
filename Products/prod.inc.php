@@ -32,10 +32,11 @@ if (mysqli_num_rows($result) > 0) {
                 // echo '<p class="prod-des">' . htmlspecialchars($row['prod_description']) . '</p>';
                 echo '<p class="prod-price">Rs: ' . htmlspecialchars($row['prod_price']) .'.00</p>';
             ?> 
-                    <form method = "POST" action="">
+                    <form method = "POST" action="addcart.php">
                     <input type="hidden" name="prod_id" value="<?php echo htmlspecialchars($row['prod_id']); ?>">
                     <input type="hidden" name="prod_name" value="<?php echo htmlspecialchars($row['prod_name']); ?>">
                     <input type="hidden" name="prod_price" value="<?php echo htmlspecialchars($row['prod_price']); ?>">
+                    <input type="hidden" name="prod_image" value="<?php echo htmlspecialchars($row['prod_image']); ?>">
 
                     
                         <button class="viewprod" onclick = openprod() > View Details</button>
