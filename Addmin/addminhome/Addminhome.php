@@ -41,8 +41,14 @@
 
         <div class="action">
             <h class="actionname"> Add New Admin </h>
-            <a href="../addminreg/addminreg.php"><button > View products </button> </a> 
+            <a href="../addminreg/addminreg.php"><button > Add Admin </button> </a> 
         </div>
+
+        <div class="action">
+            <h class="actionname"> Inquiries </h>
+            <a href="#"><button > View Customer Messages </button> </a> 
+        </div>
+
     </div>
 
 </body>
