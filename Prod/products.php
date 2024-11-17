@@ -7,49 +7,50 @@ $error = NULL;
 // Check if the user is logged in
 $isLoggedIn = isset($_SESSION['username']);
     
+if (isset($_SESSION['username'])) {
+
+                if (isset($_POST['addcart'])) {
+                    $prodid = $_POST['prod_id'];
+
+                    $sql = "SELECT `user_name`, `prod_id`, `price`, `qty`, `prod_image`, `prod_name` FROM `cart` WHERE prod_id = $prodid";
+
+                    $result = mysqli_query($conn,$sql);
+
+                    if(mysqli_num_rows($result)>0){
+                        $error = "Product Already Exsist";
+                    
+                    
+
+                    } else {
 
 
-if (isset($_POST['addcart'])) {
-    $prodid = $_POST['prod_id'];
+                    // Validate POST variables
+                    if (!empty($_POST['prod_id']) && !empty($_POST['prod_price']) && !empty($_POST['prod_image']) && !empty($_POST['prod_name'])) {
+                        $username = $_SESSION['username'];
+                        $prodid = $_POST['prod_id'];
+                        $price = $_POST['prod_price'];
+                        $qty = 1; // Default quantity is 1
+                        $prodimg = $_POST['prod_image'];
+                        $prodname = $_POST['prod_name'];
+                        
+                        // Use a prepared statement to prevent SQL injection
+                        $stmt = $conn->prepare("INSERT INTO `cart` (`user_name`, `prod_id`, `price`, `qty`, `prod_image`, `prod_name`) VALUES (?, ?, ?, ?, ?, ?)");
+                        $stmt->bind_param("ssdiss", $username, $prodid, $price, $qty, $prodimg, $prodname);
 
-    $sql = "SELECT `user_name`, `prod_id`, `price`, `qty`, `prod_image`, `prod_name` FROM `cart` WHERE prod_id = $prodid";
+                        if ($stmt->execute()) {
+                            $error = "Item added to cart successfully!";
+                            
+                        } else {
+                            echo "Error adding item to cart: " . $stmt->error;
+                        }
 
-    $result = mysqli_query($conn,$sql);
-
-    if(mysqli_num_rows($result)>0){
-        $error = "Product Already Exsist";
-       
-      
-
-    } else {
-
-
-    // Validate POST variables
-    if (!empty($_POST['prod_id']) && !empty($_POST['prod_price']) && !empty($_POST['prod_image']) && !empty($_POST['prod_name'])) {
-        $username = $_SESSION['username'];
-        $prodid = $_POST['prod_id'];
-        $price = $_POST['prod_price'];
-        $qty = 1; // Default quantity is 1
-        $prodimg = $_POST['prod_image'];
-        $prodname = $_POST['prod_name'];
-        
-        // Use a prepared statement to prevent SQL injection
-        $stmt = $conn->prepare("INSERT INTO `cart` (`user_name`, `prod_id`, `price`, `qty`, `prod_image`, `prod_name`) VALUES (?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("ssdiss", $username, $prodid, $price, $qty, $prodimg, $prodname);
-
-        if ($stmt->execute()) {
-            $error = "Item added to cart successfully!";
-            
-        } else {
-            echo "Error adding item to cart: " . $stmt->error;
-        }
-
-        $stmt->close();
-    } else {
-        echo "Error: Missing product details.";
-    }
-}
-}
+                        $stmt->close();
+                    } else {
+                        echo "Error: Missing product details.";
+                    }
+                }
+                }
+            }
 ?>
 
 
@@ -129,11 +130,13 @@ if (isset($_POST['addcart'])) {
                         $sql = mysqli_query($conn,"SELECT * FROM `cart` WHERE user_name = '$username'");
                         
                         if (mysqli_num_rows($sql) > 0 ) {
-                                $row = mysqli_num_rows($sql);   
+                                $row = mysqli_num_rows($sql); 
+                                $row = $row-1;  
                         }
-                            else {
-                                $row = "0";
-                            }
+                           
+                    }
+                    else {
+                        $row = "0";
                     }
                     ?>
 

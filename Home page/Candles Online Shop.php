@@ -24,10 +24,13 @@
 		$username = isset($_SESSION['username']) ? $_SESSION['username'] : null;
 		
          if ($username!= NUll) {
-			?> <style> .rlogin{display:none} .login{display:none;} .namediv{ display:flex;  }  </style> <?php 
+			?> <style> .rlogin{display:none} .login{display:none;} .namediv{ display:flex;  }  </style> 
+			<?php 
 		} 
 		else {
-			?> <style> .Rprofile{display:none} .login{display:block;} .namediv{display:none}  </style> <?php
+			?> <style> .Rprofile{display:none} .login{display:block;} .namediv{display:none}  </style> 
+		
+			<?php
 		}
 
         ?>
@@ -41,12 +44,12 @@
 
 
 	<div class="namediv">
-    <p class="name"><?= htmlspecialchars($username) ?></p>
+	<p class = "name"> <?php echo $username ?> </p>
     <div class="profile-container">
-        <img class="ProfilePic" src="../Images/Profile/Profile.png" alt="Profile Picture">
+       <img class="ProfilePic" src="../Images/Profile/Profile.png" alt="Profile Picture">
         <div class="profilemenu" id="Pmenu">
             <form action="" id="profile-form" class="prm" method="POST">
-                <button type="button" class="viewpro" onclick="window.location.href='profile.php'">Visit Profile</button>
+			<a href="../profileview/profile.php"> <button type="button" class="viewpro" onclick="window.location.href='profile.php'">Visit Profile</button></a>
                 <button type="submit" class="logout" name="logout">Log Out</button>
             </form>
         </div>

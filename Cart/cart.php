@@ -22,54 +22,56 @@ session_start();
     <h1 class="main-header"> SHOPPING CART</h1>
     </div>
     <?php
-        $username = $_SESSION['username'];
-        $sql ="SELECT `cart_id`, `user_name`, `prod_id`, `price`, `qty`, `prod_image`, `prod_name` FROM `cart` WHERE user_name = '$username'";
-        
-        $result = mysqli_query($conn, $sql);
+                if(isset($_SESSION['username'])) {
 
-if (mysqli_num_rows($result)>0) { 
-    $row = mysqli_fetch_assoc($result)
-    ?>
+                                $username = $_SESSION['username'];
+                                $sql ="SELECT `cart_id`, `user_name`, `prod_id`, `price`, `qty`, `prod_image`, `prod_name` FROM `cart` WHERE user_name = '$username'";
+                                
+                                $result = mysqli_query($conn, $sql);
 
-    
-    <p class = "username"> <?php echo $row['user_name'];?> </p>
+                        if (mysqli_num_rows($result)>0) { 
+                            $row = mysqli_fetch_assoc($result)
+                            ?>
 
-   <?php
-   
-   while($row = mysqli_fetch_assoc($result)) { ?>
+                            
+                            <p class = "username"> <?php echo $row['user_name'];?> </p>
 
-   
+                        <?php
+                        
+                        while($row = mysqli_fetch_assoc($result)) { ?>
 
-<div class="cart-contents">
-    <div class="middle">
-        
-        <div class="prod">
-            <img src="../Addmin/Addproducts/products/<?php echo $row['prod_image']; ?>" alt="" >
-            <h5> <?php echo $row['prod_name'];?> </h5>
-            <p>Rs <?php echo $row['price']?>.00 </p>
-            <form class = "form1" action="" method = "POST">
-                <input class = "count" name = "new-count" type="number" min="1" value = "1">
-                <input type ="submit" class = "up-count" name = "update" value ="update"> 
-            </form>
+                        
 
-            <form action="delete.php" method = "GET" class = "form2">
-            <input type="hidden" name="prod_id" value="<?php echo $row['prod_id']; ?>">
-            <input type="hidden" name="prod_id" value="<?php echo $row['prod_id']; ?>">
+                        <div class="cart-contents">
+                            <div class="middle">
+                                
+                                <div class="prod">
+                                    <img src="../Addmin/Addproducts/products/<?php echo $row['prod_image']; ?>" alt="" >
+                                    <h5> <?php echo $row['prod_name'];?> </h5>
+                                    <p>Rs <?php echo $row['price']?>.00 </p>
+                                    <form class = "form1" action="" method = "POST">
+                                        <input class = "count" name = "new-count" type="number" min="1" value = "1">
+                                        <input type ="submit" class = "up-count" name = "update" value ="update"> 
+                                    </form>
 
-                <input type="submit" name ="delete" value ="Delete">
-            </form>
-        </div>
-    </div>
-</div>
-<?php
-   } 
+                                    <form action="delete.php" method = "GET" class = "form2">
+                                    <input type="hidden" name="prod_id" value="<?php echo $row['prod_id']; ?>">
+                                    <input type="hidden" name="prod_id" value="<?php echo $row['prod_id']; ?>">
 
-    
+                                        <input type="submit" name ="delete" value ="Delete">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <?php
+                        } 
 
-  }
-  else {
-    ?> <p class = "empty"> Your cart is empty</p> <?php
-  }  ?> 
+                            
+
+                        }
+                        }  else {
+                            ?> <p class = "empty"> Please Login first</p> <?php
+                        } ?> 
 
    
 
