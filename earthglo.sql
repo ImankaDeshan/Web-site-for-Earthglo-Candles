@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 16, 2024 at 10:49 AM
+-- Generation Time: Nov 17, 2024 at 03:08 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -49,23 +49,22 @@ INSERT INTO `addmin` (`addmin_id`, `user_name`, `password`, `phoneno`, `email`) 
 --
 
 CREATE TABLE `cart` (
+  `cart_id` int(12) NOT NULL,
   `user_name` varchar(50) NOT NULL,
-  `prod_id` int(12) NOT NULL,
-  `price` int(10) NOT NULL,
-  `qty` int(12) NOT NULL
+  `prod_id` int(15) NOT NULL,
+  `price` int(12) NOT NULL,
+  `qty` int(10) NOT NULL,
+  `prod_image` varchar(255) NOT NULL,
+  `prod_name` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `cart`
 --
 
-INSERT INTO `cart` (`user_name`, `prod_id`, `price`, `qty`) VALUES
-('imankadeshan', 10, 1200, 1),
-('imankadeshan', 10, 1200, 1),
-('imankadeshan', 10, 1200, 1),
-('imankadeshan', 10, 1200, 1),
-('imankadeshan', 11, 790, 1),
-('imankadeshan', 11, 790, 1);
+INSERT INTO `cart` (`cart_id`, `user_name`, `prod_id`, `price`, `qty`, `prod_image`, `prod_name`) VALUES
+(6, 'imankadeshan', 12, 1250, 1, 'Soy candles 2.jpg', 'Soy candle'),
+(10, 'imankadeshan', 13, 350, 1, 'Tealight Candles.jpg', 'Tea Light Candles');
 
 -- --------------------------------------------------------
 
@@ -111,9 +110,10 @@ CREATE TABLE `products` (
 
 INSERT INTO `products` (`prod_id`, `prod_name`, `prod_description`, `prod_price`, `prod_image`, `prod_status`, `prod_category`) VALUES
 (10, 'pillar candle', 'Standard size pillar candles for day today home usage ', 1200, 'Pillar candles.jpg', 'active', NULL),
-(11, 'Rose Scented Candle', 'Rose fragrant scented candles for home decorations and hotel decorations.', 790, 'Scented Candles.webp', 'active', NULL),
 (12, 'Soy candle', 'Soy candles for home decorations.', 1250, 'Soy candles 2.jpg', 'active', 'soy'),
-(13, 'Tea Light Candles', 'Tea light candles for night party and honey moon decorations.', 350, 'Tealight Candles.jpg', 'active', 'tealight');
+(13, 'Tea Light Candles', 'Tea light candles for night party and honey moon decorations.', 350, 'Tealight Candles.jpg', 'active', 'tealight'),
+(15, 'Scended Candle 4', 'adqwfawsevaweaweqabnweaweaweaqwe', 1260, 'Scented Candles.webp', 'active', 'scented'),
+(16, 'Scended Candle 1a', 'asdawsd awveavweawe', 1320, 'Soy candles 2.jpg', 'active', 'soy');
 
 -- --------------------------------------------------------
 
@@ -133,7 +133,8 @@ CREATE TABLE `signup` (
 --
 
 INSERT INTO `signup` (`userid`, `username`, `email`, `password`) VALUES
-(1, 'imankadeshan', 'imankadeshan2000@gma', 'Deshanmax@12');
+(1, 'imankadeshan', 'imankadeshan2000@gma', 'Deshanmax@12'),
+(2, 'dulmioshadi', 'dulmioshadi@gmail.co', 'Dulmi@123');
 
 --
 -- Indexes for dumped tables
@@ -144,6 +145,12 @@ INSERT INTO `signup` (`userid`, `username`, `email`, `password`) VALUES
 --
 ALTER TABLE `addmin`
   ADD PRIMARY KEY (`addmin_id`);
+
+--
+-- Indexes for table `cart`
+--
+ALTER TABLE `cart`
+  ADD PRIMARY KEY (`cart_id`);
 
 --
 -- Indexes for table `products`
@@ -168,16 +175,22 @@ ALTER TABLE `addmin`
   MODIFY `addmin_id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `cart`
+--
+ALTER TABLE `cart`
+  MODIFY `cart_id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `prod_id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `prod_id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `signup`
 --
 ALTER TABLE `signup`
-  MODIFY `userid` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `userid` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
