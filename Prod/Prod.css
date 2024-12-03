@@ -64,6 +64,7 @@ position: absolute;
 .cart-icon {
 	position: absolute;
 	right: 0px;
+	top: 0px;
 	margin: 10px;
 	margin-right: 30px;
 }

@@ -64,20 +64,23 @@ if (isset($_SESSION['username'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products</title>
-    <link rel="stylesheet" href="Products.css">
+    <link rel="stylesheet" href="Prod.css">
     <script src="prod.js" defer></script>
 </head>
 <body>
 
 
 <div class="prod-page">
+<!-- ----------------------------------------------error msg -------------------------------------------- -->
+
 <?php if (!$isLoggedIn): ?>
         <div class="error-msg" style="color: red; font-weight: bold; margin:10px;">
             User not logged in! Please log in to add items to the cart.
         </div>
     <?php endif; ?>
 
-   
+<!-- -----------------------------------------------signup---------------------------------------------------------    -->
+
 <div class="signup" id ="signup-page" >
         <form action="" class="signininterface" method="POST" autocomplete ="off">
             <div class="closebtn">
@@ -109,7 +112,7 @@ if (isset($_SESSION['username'])) {
 
 
     <div class="page1">
-        <!-- Head Section -->
+<!---------------------------------- Head Section --------------------------------------------------------------------->
         <div class="head">
             <!-- Header section -->
             <div class="header">

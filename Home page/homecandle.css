@@ -100,7 +100,7 @@
 .login {
 	position: absolute;
 	right:0%;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Poppins',serif;
 	 padding:7px 20px 7px 20px;
 	 border:none;
 	 border-radius:20px;
@@ -136,6 +136,11 @@
 	
 }
 
+.profile-container:hover .profilemenu{
+	cursor: pointer;
+	display: block;
+}
+
 /* profile menu bar */
 
 .profilemenu {
@@ -148,7 +153,8 @@
 	background-color: #bbbbbb;
 	margin-right: 10px;
 	border-radius: 0px 0px 20px 20px;
-	display: block;
+	display:none;
+	;
 }
 
 .prm {
