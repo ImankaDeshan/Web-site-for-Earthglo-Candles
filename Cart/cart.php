@@ -79,12 +79,12 @@ require_once '../db.inc.php';
                     <p class="price">Total Price: Rs <?php echo $totalPrice; ?></p>
                     <p class="disprice">Discounted Price: Rs <?php echo $discountPrice; ?></p>
                 </div>
-                <a href="../Placeorder/placeorder.php"><button>Place Order</button></a>
+                <a href="../placeorder/placeorder.php"><button>Place Order</button></a>
             </div>
         </div>
 
     <?php } ?>
 
 </div>
-</body>
+</body>c
 </html>

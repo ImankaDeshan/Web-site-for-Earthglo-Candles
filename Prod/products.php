@@ -134,7 +134,7 @@ if (isset($_SESSION['username'])) {
                         
                         if (mysqli_num_rows($sql) > 0 ) {
                                 $row = mysqli_num_rows($sql); 
-                                $row = $row-1;  
+                                $row = $row;  
                         }
                            
                     }

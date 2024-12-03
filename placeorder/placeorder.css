@@ -161,12 +161,13 @@ body , html {
 
 .odersummery {
     width: 200px;
-    height: 175px;
+    height:220px;
     background-color: #e8e7e7;
     border-radius: 40px;
-    padding: 1%;
-    padding-left: 3%;
+    padding: 10px;
     box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
 }
 
 .odersummery h5 {
@@ -175,6 +176,17 @@ body , html {
     text-align: center;
     margin: 5px;
     margin-bottom: 25px;
+}
+
+.odersummery div {
+    display:grid;
+    grid-template-columns: 110px 100px;
+    margin: 0px;
+    
+}
+
+.odersummery div .Detail {
+    color: #32675F;
 }
 
 .odersummery p {
@@ -215,13 +227,12 @@ body , html {
     margin: 10px;
 
 }
-
-.rightside .Cancel:hover {
+.Cancel:hover {
     scale:1.02;
     cursor: pointer;
 }
 
-.rightside .placeorder:hover {
+.placeorder:hover {
     scale:1.02;
     cursor: pointer;
 }
