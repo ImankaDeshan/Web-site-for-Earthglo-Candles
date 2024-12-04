@@ -18,7 +18,7 @@ body , html {
       height: 100%;
       object-fit: cover;
       z-index: -1; 
-      opacity: 0.2;
+      opacity: 0.4;
      
     }
 
@@ -145,6 +145,48 @@ body , html {
 .orderform .loginbtn:hover {
     scale:1.04;
 }
+
+.orderform .buttons {
+   display: flex;
+   align-items: center;
+}
+
+.buttons .placeorder {
+    width: 100px;
+    height: 30px;
+    background-color: #32675F;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    z-index: 10;
+    margin-right: 10px;
+    margin-top: 10px;
+
+}
+
+
+.buttons .Cancel {
+    width: 100px;
+    height: 30px;
+    background-color: #d0d0d0;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 10px;
+    z-index: 10;
+     margin-right: 10px;
+    margin-top: 10px;
+
+}
+.Cancel:hover {
+    scale:1.02;
+    cursor: pointer;
+}
+
+.placeorder:hover {
+    scale:1.02;
+    cursor: pointer;
+}
+
                     /* Right side Contents */
 
 .rightside {
@@ -203,37 +245,4 @@ body , html {
     display: flex;
 }
 
-.placeorder {
-    width: 100px;
-    height: 30px;
-    background-color: #32675F;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    z-index: 10;
-    margin: 10px;
-
-}
-
-
-.Cancel {
-    width: 100px;
-    height: 30px;
-    background-color: #d0d0d0;
-    color: rgb(0, 0, 0);
-    border: none;
-    border-radius: 10px;
-    z-index: 10;
-    margin: 10px;
-
-}
-.Cancel:hover {
-    scale:1.02;
-    cursor: pointer;
-}
-
-.placeorder:hover {
-    scale:1.02;
-    cursor: pointer;
-}
 

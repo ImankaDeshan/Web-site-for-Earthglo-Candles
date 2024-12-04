@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="placeorder.css">
+    <link rel="stylesheet" href="order.css">
     <title>Check out page</title>
 </head>
 <body>
@@ -20,17 +20,17 @@
     <div class="order" id="login-page">
         <div class="head">
             <h3>Place Your Order </h3>
-            <p class ="p1"> Please fill this details to before confirm your order</p>
+            <p class ="p1"> Please fill this details to before confirm your order.</p>
          </div>
 
          <div class ="container"> 
-            <form action="" class="orderform" method="post">
+            <form action="placeorder.inc.php" class="orderform" method="post">
 
                 
                     <div class="genaral">
                         <h5> Genaral Details</h5>
-                        <input type="text" placeholder="Enter your name" name ="Cus_name">
-                        <input type="text" placeholder="Phone No" name ="Ph_no">
+                        <input type="text" placeholder="Enter your name" name ="Cus_name" required >
+                        <input type="text" placeholder="Phone No" name ="Ph_no" required>
                     </div>
 
                     <div class="Delivery-Details">
@@ -38,12 +38,21 @@
                             <input type="text" placeholder="Home No" name ="Home_no">
                             <input type="text" placeholder="Street 1" name ="Street_1">
                             <input type="text" placeholder="Street 2" name ="Street_2">
-                            <input type="text" placeholder="City" name ="City">
-                            <input type="text" placeholder="District" name ="Distric">
-                            <input type="text" placeholder="Postal Code" name ="Postal_code">
+                            <input type="text" placeholder="City" name ="City" required>
+                            <input type="text" placeholder="District" name ="Distric" required>
+                            <input type="text" placeholder="Postal Code" name ="Postal_code" required>
                     </div>
 
-                   
+                    <div class = "buttons"> 
+                        <button class="placeorder" type="submit"  name = "submit"> Place Order </button>
+                        <input class="Cancel" onclick = "Closeplaceorder()" type = "button" value = "Cancel"> 
+                        <!-- <input onclick="Closeplaceorder()" class="Cancel" type="button" value="Cancel"> -->
+                    </div>
+                    <script> 
+                         function Closeplaceorder() {
+                                window.location.href ="../Cart/cart.php";
+                            }
+                     </script>
                 
 
             </form>
@@ -111,8 +120,7 @@
 
                 <div class="btn">
                     <form action="" method="post" class = "button_form">
-                        <button class="placeorder" type="submit"  name = "submit"> Place Order </button>
-                        <input onclick="Closeplaceorder()" class="Cancel" type="button" value="Cancel">
+                        
                         
                     </form>
                 </div>
@@ -121,10 +129,6 @@
         </div>
     </div>
 
-    <script> 
-        function Closeplaceorder() {
-            window.location.href ="../Products/Products.html";
-        }
-    </script>
+  
 </body>
 </html>

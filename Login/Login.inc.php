@@ -26,7 +26,7 @@ if (isset($_POST['login'])) {
             if ($user['password'] == $password) {
                 // Password matches, start session and store username
                 $_SESSION['username'] = $user['username'];
-                $_SESSION['userid'] = $userid ['userid'];
+                $_SESSION['userid'] = $user ['userid'];
 
                 // Redirect to the home page
                 header("Location: ../Home page/Candles Online Shop.php");
