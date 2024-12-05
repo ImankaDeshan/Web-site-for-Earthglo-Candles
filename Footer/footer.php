@@ -161,20 +161,20 @@
         <div class="footer-col">
             <h4>Products</h4>
             <ul>
-                <li><a href="#">Scented Candles</a></li>
-                <li><a href="#">Soy Candles</a></li>
-                <li><a href="#">Pillar Candles</a></li>
-                <li><a href="#">Tea Light Candles </a></li>
+                <li><a href="../Products/prod.php">Scented Candles</a></li>
+                <li><a href="../Products/prod.php">Soy Candles</a></li>
+                <li><a href="../Products/prod.php">Pillar Candles</a></li>
+                <li><a href="../Products/prod.php">Tea Light Candles </a></li>
             </ul>
         </div>
         
         <div class="footer-col">
             <h4>Quick Links</h4>
             <ul>
-                <li><a href="Candles Online Shop.php">Home</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="../About us/AboutUs.php">About Us</a></li>
                 <li><a href="../Contact us/Contact.php">Contact Us</a></li>
-                <li><a href="#">Cart</a></li>
+                <li><a href="../Cart/cart.php">Cart</a></li>
             </ul>
         </div>
         

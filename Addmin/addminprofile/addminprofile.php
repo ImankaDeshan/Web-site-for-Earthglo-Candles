@@ -1,9 +1,8 @@
 <?php
     session_start();
-    require_once '../db.inc.php';
+    require_once '../../db.inc.php';
 
-?>
-
+?> 
 
 
 <!DOCTYPE html>
@@ -12,7 +11,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Profile</title>
-    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="addminprofile.css">
 </head>
 <body>
 
@@ -25,6 +24,7 @@
             $result = mysqli_query($conn,$sql);
             $row = mysqli_fetch_assoc($result);
                                                  ?>
+                                                 
 <!-- ------------------------------------ profile details contents-----------------------------------------------         -->
         
             <div class="profile-container">
@@ -34,15 +34,8 @@
                 <h1> @<?php echo $row['username'];?> </h1>
                 <p> <?php echo $row['email'] ?> </p>
 
-                <!-- Buttons Section
-                <div class="buttons">
-                     Redirect to Edit Profile Page -->
-                <!-- <form action="edit.php" method ="POST" class = "edit">
-                    <button name = "edit" class="editbtn" onclick="window.location.href='../edit.php'">Edit Profile</button> -->
-                </form> 
-
                 <form action="delete.php" method ="POST" class = "edit">
-                    <button name = "edit" class="editbtn">Edit Profile</button>
+                    <button name = "edit" class = "editbtn"> Edit Profile</button>
                     <button name = "delete" class = "delete">Delete Profile</button>
                     <input type="hidden" name = "username" value = "<?php echo $row['username'];?>">
                 </form>

@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -129,9 +133,13 @@
         </ul>
     </div>
 
+    <?php
+        $username = $_SESSION['username'];
+    ?>
+
     <div class="profile">
-        <p class="name"> Imanka Deshan</p>
-        <img src="../../Images/Profile/Profile.png" alt="" class="profilepic">
+        <p class="name"> <?php echo $username; ?></p>
+        <a href = "../addminprofile/addminprofile.php"><img src="../../Images/Profile/Profile.png" alt="" class="profilepic"></a>
     </div>
 
     </div>

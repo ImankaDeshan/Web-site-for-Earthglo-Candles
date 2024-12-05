@@ -46,7 +46,7 @@
 
         <div class="action">
             <h class="actionname"> Inquiries </h>
-            <a href="#"><button > View Customer Messages </button> </a> 
+            <a href="../Viewinquiries/inquiries.php"><button> View Customer Messages </button> </a> 
         </div>
 
     </div>

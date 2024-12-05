@@ -1,4 +1,6 @@
-
+<?php
+    
+?>
 
 
 <!DOCTYPE html>
@@ -78,22 +80,22 @@
                     <!-- Message Box -->
 
                     <div class = "contactForm">
-                        <form>
+                        <form method = "POST" action = "Contact.inc.php">
                             <h2>Send Message</h2>
 
                             <div class = "inputBox">
-                                <input placeholder="Full Name" type="text" name = "" required = "required">
+                                <input placeholder="Full Name" type="text" name = "full_name" required = "required">
                           
 
                             
-                                <input placeholder="Email" type="text" name = "" required = "required">
+                                <input placeholder="Email" type="text" name = "email" required = "required">
                             
 
                             
-                                <textarea placeholder="Type your Message" required = "required"></textarea>
+                                <textarea placeholder="Type your Message" name = "inquiry" required = "required"></textarea>
                           
 
-                                <input type="submit" name = "" value = "send">
+                                <input type="submit" name = "send" value = "send">
                             </div>
                         </form>
                     </div>
