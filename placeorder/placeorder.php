@@ -1,6 +1,50 @@
 <?php  
     session_start();
     require_once '../db.inc.php';
+
+// -- --------------------------------------------------fetch data from the database---------------------------------------------------------------- -->
+
+
+           if (isset($_SESSION['username'])) {
+            $username = $_SESSION['username'];
+           
+        
+            // SQL query to sum the quantity of items in the cart for the specific user
+            $sql = "SELECT SUM(qty) AS item_count FROM cart WHERE user_name = '$username'";
+        
+            // Execute the query
+            $result = mysqli_query($conn, $sql);
+        
+            // Check if the query was successful
+            if ($result) {
+                $row = mysqli_fetch_assoc($result);
+                // Use null coalescing operator to handle null values
+                $itemcount = $row['item_count'] ?? 0; 
+                
+            } else {
+                // Handle query failure
+                $itemcount = 0;
+            }
+        } else {
+            // If session username is not set, set item count to 0
+            $itemcount = 0;
+        }
+
+
+    // ------------------------------------------calculate total ----------------------------------------------------
+
+    if (isset($_SESSION['username'])) {
+        $sql1 = "SELECT SUM(price * qty) AS total_count FROM cart WHERE user_name = '$username'";
+        $result1 =mysqli_query($conn,$sql1);
+
+        if ($result1) {
+            $row1 = mysqli_fetch_assoc($result1);
+            $total = $row1['total_count'];
+            $delivery = floor(($total*15) / 100);
+            $discounted = floor( ($total * 95) / 100);
+            $totalprice = $discounted + $delivery;
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -42,7 +86,8 @@
                             <input type="text" placeholder="District" name ="Distric" required>
                             <input type="text" placeholder="Postal Code" name ="Postal_code" required>
                     </div>
-
+                    
+                    <input type="hidden" name="total" value="<?php echo $totalprice; ?> ">
                     <div class = "buttons"> 
                         <button class="placeorder" type="submit"  name = "submit"> Place Order </button>
                         <input class="Cancel" onclick = "Closeplaceorder()" type = "button" value = "Cancel"> 
@@ -57,47 +102,7 @@
 
             </form>
 
-<!-- --------------------------------------------------fetch data from the database---------------------------------------------------------------- -->
 
-            <?php
-           if (isset($_SESSION['username'])) {
-            $username = $_SESSION['username'];
-           
-        
-            // SQL query to sum the quantity of items in the cart for the specific user
-            $sql = "SELECT SUM(qty) AS item_count FROM cart WHERE user_name = '$username'";
-        
-            // Execute the query
-            $result = mysqli_query($conn, $sql);
-        
-            // Check if the query was successful
-            if ($result) {
-                $row = mysqli_fetch_assoc($result);
-                // Use null coalescing operator to handle null values
-                $itemcount = $row['item_count'] ?? 0; 
-                $delivery = "250";
-            } else {
-                // Handle query failure
-                $itemcount = 0;
-            }
-        } else {
-            // If session username is not set, set item count to 0
-            $itemcount = 0;
-        }
-// ------------------------------------------calculate total ----------------------------------------------------
-
-        if (isset($_SESSION['username'])) {
-            $sql1 = "SELECT SUM(price * qty) AS total_count FROM cart WHERE user_name = '$username'";
-            $result1 =mysqli_query($conn,$sql1);
-
-            if ($result1) {
-                $row1 = mysqli_fetch_assoc($result1);
-                $total = $row1['total_count'];
-                $discounted = floor( ($total * 95) / 100);
-                $totalprice = $discounted + $delivery;
-            }
-        }
-        ?>
         
         <div class="rightside">
             <div class="odersummery">
@@ -118,12 +123,7 @@
             </div>
         </div>
 
-                <div class="btn">
-                    <form action="" method="post" class = "button_form">
-                        
-                        
-                    </form>
-                </div>
+                
              </div>
          
         </div>
