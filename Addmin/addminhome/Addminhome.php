@@ -26,7 +26,7 @@
 
         <div class="action">
             <h class="actionname"> View Orders </h>
-            <button > My Orders </button> 
+            <a href="../Vieworders/vieworder.php"><button > My Orders </button></a> 
         </div>
 
         <div class="action">
