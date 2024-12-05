@@ -139,7 +139,7 @@
 
     <div class="profile">
         <p class="name"> <?php echo $username; ?></p>
-        <a href = "../addminprofile/addminprofile.php"><img src="../../Images/Profile/Profile.png" alt="" class="profilepic"></a>
+       
     </div>
 
     </div>

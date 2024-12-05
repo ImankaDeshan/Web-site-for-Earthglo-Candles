@@ -42,9 +42,9 @@ require_once '../db.inc.php';
                             <h5><?php echo $row['prod_name']; ?></h5>
                             <p>Rs <?php echo $row['price']; ?>.00</p>
                             <form class="form1" action="update_qty.php" method="POST">
-                                <input class="count" name="new_qty" type="number" min="1" value="<?php echo $row['qty']; ?>">
-                                <input type="hidden" name="prod_id" value="<?php echo $row['prod_id']; ?>">
-                                <input type="submit" class="up-count" name="update_qty" value="Update">
+                                    <input class="count" name="new_qty" type="number" min="1" value="<?php echo $row['qty']; ?>">
+                                    <input type="hidden" name="prod_id" value="<?php echo $row['prod_id']; ?>">
+                                    <input type="submit" class="up-count" name="update_qty" value="Update">
                             </form>
                             <form action="delete.php" method="GET" class="form2">
                                 <input type="hidden" name="prod_id" value="<?php echo $row['prod_id']; ?>">
@@ -53,32 +53,7 @@ require_once '../db.inc.php';
                         </div>
                     </div>
                 </div>
-            <?php
-            
-            if (isset($_SESSION['username'])) {
-                // Fetch the total price for the cart
-                $sql = "SELECT SUM(price * qty) AS total_price FROM cart WHERE user_name = '$username'";
-                $result = mysqli_query($conn, $sql);
-                $row = mysqli_fetch_assoc($result);
-                $totalPrice = $row['total_price'] ?? 0; // Default to 0 if null
-                $discountPrice = floor(($totalPrice * 95) / 100); // Calculate discounted price
-                ?>
-        
-                <div class="option-bar">
-                    <div class="options">
-                        <div class="total">
-                            <p class="price">Total Price: Rs <?php echo $totalPrice; ?></p>
-                            <p class="disprice">Discounted Price: Rs <?php echo $discountPrice; ?></p>
-                        </div>
-                        <a href="../placeorder/placeorder.php"><button>Place Order</button></a>
-                    </div>
-                </div>
-        
-            <?php } 
-        
-        
-        
-        }
+            <?php }
         } else {
             // Display a message if the cart is empty
             echo "<p class='empty'>Your cart is empty!</p>";
@@ -89,8 +64,27 @@ require_once '../db.inc.php';
     }
     ?>
 
-    
+    <?php if (isset($_SESSION['username'])) {
+        // Fetch the total price for the cart
+        $sql = "SELECT SUM(price * qty) AS total_price FROM cart WHERE user_name = '$username'";
+        $result = mysqli_query($conn, $sql);
+        $row = mysqli_fetch_assoc($result);
+        $totalPrice = $row['total_price'] ?? 0; // Default to 0 if null
+        $discountPrice = floor(($totalPrice * 95) / 100); // Calculate discounted price
+        ?>
+
+        <div class="option-bar">
+            <div class="options">
+                <div class="total">
+                    <p class="price">Total Price: Rs <?php echo $totalPrice; ?></p>
+                    <p class="disprice">Discounted Price: Rs <?php echo $discountPrice; ?></p>
+                </div>
+                <a href="../Placeorder/placeorder.php"><button>Place Order</button></a>
+            </div>
+        </div>
+
+    <?php } ?>
 
 </div>
-</body>c
+</body>
 </html>

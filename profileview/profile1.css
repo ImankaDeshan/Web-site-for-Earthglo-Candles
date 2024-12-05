@@ -95,3 +95,27 @@
     height: 50px;
     font-size: 20px;
 }
+
+.custom-file-upload {
+    width: 200px;
+    height: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #768a9e;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.custom-file-upload:hover {
+    background-color: #0056b3;
+}
+
+#fileName {
+    margin-left: 10px;
+    font-style: italic;
+    color: #666;
+}

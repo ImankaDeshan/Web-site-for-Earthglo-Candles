@@ -29,7 +29,7 @@
         
             <div class="profile-container">
                 
-                <img src="../Images/Page2/Pillar candles.jpg" alt="">
+                <img src=""  alt="Upload Profile Image" onerror="this.onerror=null; this.src='../Images/Profile/Profile_alt.jpg';">
                 <div class="line"></div>
                 <h1> @<?php echo $row['username'];?> </h1>
                 <p> <?php echo $row['email'] ?> </p>
@@ -42,7 +42,7 @@
                 </form> 
 
                 <form action="delete.php" method ="POST" class = "edit">
-                    <button name = "edit" class="editbtn">Edit Profile</button>
+                    <!-- <button name = "edit" class="editbtn">Edit Profile</button> -->
                     <button name = "delete" class = "delete">Delete Profile</button>
                     <input type="hidden" name = "username" value = "<?php echo $row['username'];?>">
                 </form>
